@@ -284,17 +284,20 @@ body{
 }
 
 .main .acerca-de .contenedor .titulo-seccion{
-  width: 33.33%;
+  width: 34%;
   text-align: left;
 }
 
 .main .acerca-de .contenedor .titulo-seccion h2{
+    font-size: 2.5em;
   margin-bottom: 0;
 }
 
 .main .acerca-de .texto-acerca-de{
-  width: 66.66%;
-  text-align: left;
+  width: 66%;
+  padding-left: 1em;
+  height: auto;
+  text-align: justify;
 }
 
 .main .acerca-de .texto-acerca-de p{
@@ -378,7 +381,7 @@ body{
   text-align: center;
 }
 
-.main .nuestro-equipo .equipo .persona-equipo:first-child, .main .nuestro-equipo .equipo .persona-equipo:last-child{
+.main .nuestro-equipo .equipo .persona-equipo{
   position: relative;
   top: 20px;
 }

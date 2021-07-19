@@ -1,10 +1,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-        <title>S - Design Studio</title>
+    <head lang="es" dir="ltr">
+        <%@ include file = "cabecera.jsp" %>
+
+        <title>Hotel Royal Hunt</title>
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="Resourses/CSS/principal.css">
@@ -25,8 +25,7 @@
             <!-- Versión móvil -->
             <div class="menu-mobile">
                 <div class="barra">
-                    <a href="#" class="logo">
-                        <img src="Resourses/Images/logotipo.png" alt="Logo S - Design Studio">
+                        <img src="Resourses/Images/logo.jpg" style="border-radius: 50%"alt="Royal Hunt">
                     </a>
                     <a href="#" id="btnMenu">
                         <i class="fa fa-bars" aria-hidden="true"></i>
@@ -34,8 +33,8 @@
                 </div>
                 <nav class="menu-principal">
                     <a href="#" class="volver-arriba">INICIO</a>
-                    <a href="#proyectos" class="scroll-suave">PROYECTOS</a>
-                    <a href="#acercaDe" class="scroll-acercaDe">ACERCA DE</a>
+                    <a href="#proyectos" class="scroll-suave">SERVICIOS</a>
+                    <a href="#acercaDe" class="scroll-acercaDe">ESPECIALIDADES</a>
                     <a href="#equipo" class="scroll-equipo">NUESTRO EQUIPO</a>
                     <a href="./formulario.jsp">RESERVAS</a>
                     <a href="#contacto" class="scroll-suave">CONTACTO</a>
@@ -46,26 +45,26 @@
             <div class="menu-bar-pc">
 
                 <a href="#" class="logo">
-                    <img src="Resourses/Images/logotipo.png" alt="Logo S - Design Studio">
+                    <img src="Resourses/Images/logo.jpg" style="border-radius:50%" alt="Royal Hunt">
                 </a>
 
                 <nav class="menu-principal">
                     <a href="#" class="volver-arriba">INICIO</a>
-                    <a href="#proyectos" class="scroll-suave">PROYECTOS</a>
-                    <a href="#acercaDe" class="scroll-acercaDe">ACERCA DE</a>
+                    <a href="#proyectos" class="scroll-suave">SERVICIOS</a>
+                    <a href="#acercaDe" class="scroll-acercaDe">ESPECIALIDADES</a>
                     <a href="#equipo" class="scroll-equipo">NUESTRO EQUIPO</a>
                     <a href="./formulario.jsp">RESERVAS</a>
                     <a href="#contacto" class="scroll-suave">CONTACTO</a>
                 </nav>
 
                 <div class="top-redes">
-                    <a href="#">
+                    <a href="https://es-la.facebook.com/">
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://twitter.com/tweeter?lang=es">
                         <i class="fa fa-twitter" aria-hidden="true"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/?hl=es">
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -75,24 +74,24 @@
 
         <div class="fixed-header" id="fixedHeader">
             <a href="#"  class="logo">
-                <img src="Resourses/Images/logotipo.png" alt="Logo S - Design Studio">
+                <img src="Resourses/Images/logo.jpg" style="border-radius:50%" alt="Royal Hunt">
             </a>
             <nav class="menu-principal">
                 <a href="#" class="volver-arriba">INICIO</a>
-                <a href="#proyectos" class="scroll-suave">PROYECTOS</a>
-                <a href="#acercaDe" class="scroll-acercaDe">ACERCA DE</a>
+                <a href="#proyectos" class="scroll-suave">SERVICIOS</a>
+                <a href="#acercaDe" class="scroll-acercaDe">ESPECIALIDADES</a>
                 <a href="#equipo" class="scroll-equipo">NUESTRO EQUIPO</a>
                 <a href="./formulario.jsp">RESERVAS</a>
                 <a href="#contacto" class="scroll-suave">CONTACTO</a>
             </nav>
             <div class="top-redes">
-                <a href="#">
+                <a href="https://es-la.facebook.com/">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
-                <a href="#">
+                <a href="https://twitter.com/tweeter?lang=es">
                     <i class="fa fa-twitter" aria-hidden="true"></i>
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/?hl=es">
                     <i class="fa fa-instagram" aria-hidden="true"></i>
                 </a>
             </div>
@@ -114,27 +113,27 @@
             <section class="proyectos" id="proyectos">
                 <div class="contenedor">
                     <div class="titulo-seccion">
-                        <h2>Ultimos Proyectos</h2>
-                        <p>Somos especialistas en entregar los mejores trabajos y la más alta calidad</p>
+                        <h2>Espectaculos y deportes pensados para nuestros clientes</h2>
+                        <p>Somos especialistas en entregar los mejores momentos y la mejor diversión</p>
                     </div>
                     <div class="galeria-proyectos">
                         <div class="proyecto">
-                            <img src="Resourses/Images/proyecto1.jpg" alt="Proyecto" class="imagen-proyecto">
+                            <img src="Resourses/Images/1-Golf.jpg" alt="Golf" class="imagen-proyecto">
                         </div>
                         <div class="proyecto">
-                            <img src="Resourses/Images/proyecto2.jpg" alt="Proyecto" class="imagen-proyecto">
+                            <img src="Resourses/Images/2-Natacion.jpg" alt="Natacion" class="imagen-proyecto">
                         </div>
                         <div class="proyecto">
-                            <img src="Resourses/Images/proyecto3.jpg" alt="Proyecto" class="imagen-proyecto">
+                            <img src="Resourses/Images/3-Rugby.jpg" alt="Rugby" class="imagen-proyecto">
                         </div>
                         <div class="proyecto">
-                            <img src="Resourses/Images/proyecto4.jpg" alt="Proyecto" class="imagen-proyecto">
+                            <img src="Resourses/Images/4-Polo.jpg" alt="Polo" class="imagen-proyecto">
                         </div>
                         <div class="proyecto">
-                            <img src="Resourses/Images/proyecto5.jpg" alt="Proyecto" class="imagen-proyecto">
+                            <img src="Resourses/Images/5-Baile.jpg" alt="Baile" class="imagen-proyecto">
                         </div>
                         <div class="proyecto">
-                            <img src="Resourses/Images/proyecto6.jpg" alt="Proyecto" class="imagen-proyecto">
+                            <img src="Resourses/Images/6-Deporte4x4.jpg" alt="Deporte4x4" class="imagen-proyecto">
                         </div>
                     </div>
                 </div>
@@ -144,11 +143,23 @@
             <section class="acerca-de" id="acercaDe">
                 <div class="contenedor">
                     <div class="titulo-seccion">
-                        <h2>Acerca de</h2>
+                        <h2>Especialidades</h2>
                         <p>Conoce más sobre nosotros, lo que hacemos y cómo lo hacemos</p>
                     </div>
                     <div class="texto-acerca-de">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae odit accusantium, incidunt quam, molestias est animi velit ab ullam id voluptatem rem assumenda quisquam voluptas esse, maiores, deserunt laudantium mollitia modi quod deleniti nisi! Repellat labore odio deleniti quos id, nulla quae cupiditate officia, quibusdam iste beatae! Eveniet quo amet doloremque. Veritatis debitis, quas rerum, pariatur quibusdam unde incidunt accusantium nostrum laudantium soluta fugit adipisci ipsa reprehenderit dolor at. Esse repellat est a velit! Magnam dicta quod hic suscipit quis neque ut ab dignissimos aperiam quam inventore odio harum porro in laudantium, natus quae necessitatibus laboriosam rem quisquam minus labore nobis! Sunt, vero nam repellat ut quaerat similique, rerum iusto! Possimus suscipit quia esse deleniti in! Quam sunt, sint animi laudantium quasi, quia consequuntur fugiat aut. Commodi, nemo.</p>
+                        <p>Atracciones para visitar con toda la familia y amigos
+                        • Catedral de León
+                        
+                        • Estadio León
+                        • Centro de exposiciones y convenciones Poliforum León
+                        • Arco Triunfal Calzada de los Héroes
+                        Otros puntos de interés cerca de Hoteles Royal Hunt
+                        • Centro comercial Plaza del Zapato
+                        • Zoológico de León
+                        • Centro comercial Centro Max
+                        • Teatro Manuel Doblado
+                        • Centro de Ciencias Explora
+                        • Vuelos a León</p>
                     </div>
                 </div>
             </section>
@@ -163,7 +174,7 @@
                         <img src="Resourses/Images/slide2.jpg" alt="Slide">
                     </div>
                     <div class="slide">
-                        <img src="Resourses/Images/slide3.jpg" alt="Slide">
+                        <img src="Resourses/Images/slide3.jpeg" alt="Slide">
                     </div>
                     <div class="slide">
                         <img src="Resourses/Images/slide4.jpg" alt="Slide">
@@ -191,8 +202,8 @@
                             </div>
                             <div class="texto">
                                 <h3>Raúl Gonzalez</h3>
-                                <h4>Diseñador Gráfico</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, nobis.</p>
+                                <h4>Conserje Real</h4>
+                                <p>25 años dando atencion, calidad y asesoria a nuestros clientes</p>
                             </div>
                         </div>
 
@@ -201,9 +212,9 @@
                                 <img src="Resourses/Images/foto2.jpg" alt="Persona">
                             </div>
                             <div class="texto">
-                                <h3>Paul Ramirez</h3>
-                                <h4>Desarrollador Web</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, nobis.</p>
+                                <h3>Laura Lentini</h3>
+                                <h4>Administradora de servicio</h4>
+                                <p>Gracias a sus destrezas y habilidades, el hotel funciona las 24 horas a plena capacidad</p>
                             </div>
                         </div>
 
@@ -212,9 +223,9 @@
                                 <img src="Resourses/Images/foto3.jpg" alt="Persona">
                             </div>
                             <div class="texto">
-                                <h3>María Castro</h3>
-                                <h4>Publicista</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, nobis.</p>
+                                <h3>De María Castro</h3>
+                                <h4>Chef Profesional</h4>
+                                <p>Aporta su experiencia y conocimiento se sirven las mas ricas y sabrosas comidas</p>
                             </div>
                         </div>
 
