@@ -1,18 +1,44 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head lang="es" dir="ltr">
+<html  lang="es" dir="ltr">
+    <head>
         <%@ include file = "cabecera.jsp" %>
 
         <title>Hotel Royal Hunt</title>
-        <link rel="stylesheet" href="css/font-awesome.min.css">
+
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="Resourses/CSS/principal.css">
+        <link rel="stylesheet" href="Resourses/CSS/redesSociales.css">
+        <link rel="stylesheet" type="text/css" href="Resourses/CSS/footer.css">
 
-        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <!--Fuentes para la barra de redes Sociales-->
+        <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <!--Inicio de Barra de redes Sociales-->
+        <div class="container-bar">
+            <input type="checkbox" id="btn-social">
+            <label for="btn-social" class="fa fa-play"></label>
+            <div class="icon-social">
+                <a href="https://es-la.facebook.com/" class="fa fa-facebook">
+                    <span id="title">Facebook</span>
+                </a>
+                <a href="https://www.youtube.com/" class="fa fa-youtube">
+                    <span id="title">Youtube</span>
+                </a>
+                <a href="https://twitter.com/tweeter?lang=es" class="fa fa-twitter">
+                    <span id="title">Twitter</span>
+                </a>
+                <a href="https://www.instagram.com/?hl=es" class="fa fa-instagram">
+                    <span id="title">Instagram</span>
+                </a>
+                <a href="https://ar.pinterest.com/" class="fa fa-pinterest">
+                    <span id="title">Pinterest</span>
+                </a>
+            </div>
+        </div>
 
+        <!--Fin de Barra de redes Sociales-->
         <!-- Boton "Volver Arriba" -->
         <div class="btn-volver-arriba" id="btnVolverArriba">
             <a href="#" class="volver-arriba">
@@ -25,7 +51,7 @@
             <!-- Versión móvil -->
             <div class="menu-mobile">
                 <div class="barra">
-                        <img src="Resourses/Images/logo.jpg" style="border-radius: 50%"alt="Royal Hunt">
+                    <img src="Resourses/Images/logo.jpg" style="border-radius: 50%"alt="Royal Hunt">
                     </a>
                     <a href="#" id="btnMenu">
                         <i class="fa fa-bars" aria-hidden="true"></i>
@@ -33,11 +59,11 @@
                 </div>
                 <nav class="menu-principal">
                     <a href="#" class="volver-arriba">INICIO</a>
-                    <a href="#proyectos" class="scroll-suave">SERVICIOS</a>
-                    <a href="#acercaDe" class="scroll-acercaDe">ESPECIALIDADES</a>
+                    <a href="#proyectos" class="scroll-suave">ENTRETENIMIENTO</a>
+                    <a href="#acercaDe" class="scroll-acercaDe">SERVICIOS</a>
                     <a href="#equipo" class="scroll-equipo">NUESTRO EQUIPO</a>
                     <a href="./formulario.jsp">RESERVAS</a>
-                    <a href="#contacto" class="scroll-suave">CONTACTO</a>
+                    <a href="#contacto" class="scroll-suave">SUSCRIPCION</a>
                 </nav>
             </div>
 
@@ -50,11 +76,11 @@
 
                 <nav class="menu-principal">
                     <a href="#" class="volver-arriba">INICIO</a>
-                    <a href="#proyectos" class="scroll-suave">SERVICIOS</a>
-                    <a href="#acercaDe" class="scroll-acercaDe">ESPECIALIDADES</a>
+                    <a href="#proyectos" class="scroll-suave">ENTRETENIMIENTO</a>
+                    <a href="#acercaDe" class="scroll-acercaDe">SERVICIOS</a>
                     <a href="#equipo" class="scroll-equipo">NUESTRO EQUIPO</a>
                     <a href="./formulario.jsp">RESERVAS</a>
-                    <a href="#contacto" class="scroll-suave">CONTACTO</a>
+                    <a href="#contacto" class="scroll-suave">SUSCRIPCION</a>
                 </nav>
 
                 <div class="top-redes">
@@ -78,11 +104,11 @@
             </a>
             <nav class="menu-principal">
                 <a href="#" class="volver-arriba">INICIO</a>
-                <a href="#proyectos" class="scroll-suave">SERVICIOS</a>
-                <a href="#acercaDe" class="scroll-acercaDe">ESPECIALIDADES</a>
+                <a href="#proyectos" class="scroll-suave">ENTRETENIMIENTO</a>
+                <a href="#acercaDe" class="scroll-acercaDe">SERVICIOS</a>
                 <a href="#equipo" class="scroll-equipo">NUESTRO EQUIPO</a>
                 <a href="./formulario.jsp">RESERVAS</a>
-                <a href="#contacto" class="scroll-suave">CONTACTO</a>
+                <a href="#contacto" class="scroll-suave">SUSCRIPCION</a>
             </nav>
             <div class="top-redes">
                 <a href="https://es-la.facebook.com/">
@@ -104,8 +130,8 @@
                 <div class="banner" id="banner"></div>
                 <div class="texto-banner">
                     <h2>Siempre Innovando</h2>
-                    <h1>Design Studio</h1>
-                    <a href="#proyectos" class="scroll-suave">VER PROYECTOS</a>
+                    <h1>HOTEL ROYAL HUNT</h1>
+                    <a href="#proyectos" class="scroll-suave">Tu relax, nuestra especialidad</a>
                 </div>
             </section>
 
@@ -113,7 +139,7 @@
             <section class="proyectos" id="proyectos">
                 <div class="contenedor">
                     <div class="titulo-seccion">
-                        <h2>Espectaculos y deportes pensados para nuestros clientes</h2>
+                        <h2>Entretenimiento y deportes pensados para nuestros clientes</h2>
                         <p>Somos especialistas en entregar los mejores momentos y la mejor diversión</p>
                     </div>
                     <div class="galeria-proyectos">
@@ -124,7 +150,7 @@
                             <img src="Resourses/Images/2-Natacion.jpg" alt="Natacion" class="imagen-proyecto">
                         </div>
                         <div class="proyecto">
-                            <img src="Resourses/Images/3-Rugby.jpg" alt="Rugby" class="imagen-proyecto">
+                            <img src="Resourses/Images/3-Tenis.jpg" alt="Tenis" class="imagen-proyecto">
                         </div>
                         <div class="proyecto">
                             <img src="Resourses/Images/4-Polo.jpg" alt="Polo" class="imagen-proyecto">
@@ -133,7 +159,7 @@
                             <img src="Resourses/Images/5-Baile.jpg" alt="Baile" class="imagen-proyecto">
                         </div>
                         <div class="proyecto">
-                            <img src="Resourses/Images/6-Deporte4x4.jpg" alt="Deporte4x4" class="imagen-proyecto">
+                            <img src="Resourses/Images/6-Gimnasio.jpg" alt="Gimnasio" class="imagen-proyecto">
                         </div>
                     </div>
                 </div>
@@ -143,29 +169,29 @@
             <section class="acerca-de" id="acercaDe">
                 <div class="contenedor">
                     <div class="titulo-seccion">
-                        <h2>Especialidades</h2>
+                        <h2>SERVICIOS</h2>
                         <p>Conoce más sobre nosotros, lo que hacemos y cómo lo hacemos</p>
                     </div>
                     <div class="texto-acerca-de">
                         <p>Atracciones para visitar con toda la familia y amigos
-                        • Catedral de León
-                        
-                        • Estadio León
-                        • Centro de exposiciones y convenciones Poliforum León
-                        • Arco Triunfal Calzada de los Héroes
-                        Otros puntos de interés cerca de Hoteles Royal Hunt
-                        • Centro comercial Plaza del Zapato
-                        • Zoológico de León
-                        • Centro comercial Centro Max
-                        • Teatro Manuel Doblado
-                        • Centro de Ciencias Explora
-                        • Vuelos a León</p>
+                            • Catedral de León
+
+                            • Estadio de tenis
+                            • Centro de exposiciones y convenciones Poliforum León
+                            • Arco Triunfal Calzada de los Héroes
+                            Otros puntos de interés cerca de Hoteles Royal Hunt
+                            • Centro comercial Plaza del Zapato
+                            • Zoológico de León
+                            • Centro comercial Centro Max
+                            • Teatro Manuel Doblado
+                            • Centro de Ciencias Explora
+                            • Vuelos a León</p>
                     </div>
                 </div>
             </section>
 
             <!-- Slider -->
-            <section class="contenedor-slider">
+            <section class="contenedor-fluid">
                 <div class="slider" id="slider">
                     <div class="slide">
                         <img src="Resourses/Images/slide1.jpg" alt="Slide">
@@ -202,7 +228,7 @@
                             </div>
                             <div class="texto">
                                 <h3>Raúl Gonzalez</h3>
-                                <h4>Conserje Real</h4>
+                                <h4>Gerente de Hotel</h4>
                                 <p>25 años dando atencion, calidad y asesoria a nuestros clientes</p>
                             </div>
                         </div>
@@ -213,7 +239,7 @@
                             </div>
                             <div class="texto">
                                 <h3>Laura Lentini</h3>
-                                <h4>Administradora de servicio</h4>
+                                <h4>Administradora de servicios</h4>
                                 <p>Gracias a sus destrezas y habilidades, el hotel funciona las 24 horas a plena capacidad</p>
                             </div>
                         </div>
@@ -244,7 +270,7 @@
                             </div>
                             <div class="texto-info">
                                 <h4>Imaginamos y diseñamos</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, assumenda.</p>
+                                <p>Queremos que te lleves recuerdos y momentos inolvidables y los compartas con toda tu familia y tus amigos.</p>
                             </div>
                         </div>
 
@@ -253,8 +279,8 @@
                                 <i class="fa fa-desktop" aria-hidden="true"></i>
                             </div>
                             <div class="texto-info">
-                                <h4>Creamos</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, assumenda.</p>
+                                <h4>Creamos diversion y descanso</h4>
+                                <p>Pensado especialmente para la recreacion y descanso del cuerpo y tu relax inegral</p>
                             </div>
                         </div>
 
@@ -269,8 +295,8 @@
                 <div class="contenedor">
                     <div class="contenedor-formulario">
                         <div class="formulario" id="formulario">
-                            <h2>Cuéntanos sobre tu proyecto</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, fugit.</p>
+                            <h2>Suscribete y recibe nuestras novedades</h2>
+                            <p>Recibe descuentos, promociones, nuevas actividades y espectaculos, mantente actualizado y disfruta de la vida!</p>
                             <form>
                                 <div>
                                     <input type="text" name="nombre" placeholder="Nombre" id="nombre">
@@ -281,11 +307,11 @@
                                     <p class="error">Por favor escribe tu correo</p>
                                 </div>
                                 <div>
-                                    <textarea name="mensaje" placeholder="Cuéntanos de tu proyecto" id="mensaje"></textarea>
+                                    <textarea name="mensaje" placeholder="Dejanos tu opinion" id="mensaje"></textarea>
                                     <p class="error">Por favor escribe tu mensaje</p>
                                 </div>
                                 <div>
-                                    <input type="submit" name="enviar" value="Enviar">
+                                    <input type="submit" name="enviar" value="Suscribirse">
                                 </div>
                             </form>
                         </div>
@@ -299,23 +325,8 @@
 
         </section>
 
-        <!-- Pie de página -->
-        <footer>
-            <div class="copy">
-                <p>Todos los derechos reservados</p>
-            </div>
-            <div class="footer-redes">
-                <a href="#">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-            </div>
-        </footer>
+        <!--Incluimos el archivo de Pie de pagina-->
+        <%@ include file = "footer.jsp" %>
 
         <script src="Resourses/JS/jquery.min.js"></script>
         <!-- <script src="js/banner.js"></script> -->
