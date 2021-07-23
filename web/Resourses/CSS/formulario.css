@@ -1,8 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div.menu-bar-pc{
+    background-color: rgba(133, 104, 73, 0.78);  
+}
+/*slider*/
+.contenedor-slider{
+    width: 100%;
+    overflow: hidden;
+    background: #F3F4FA;
+    padding: 54px 0;
+    position: relative;
+}
+
+.contenedor-slider .slider{
+    width: 400%;
+    display: flex;
+}
+
+.contenedor-slider .slider .slide{
+    width: 15%;
+    max-width: 950px;
+    margin-right: 0.7%;
+    box-shadow: 0px 20px 40px #aaa;
+}
+
+.contenedor-slider .slider .slide img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.contenedor-slider .btn-anterior, .contenedor-slider .btn-siguiente{
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.contenedor-slider .btn-anterior{
+    left: 2%;
+}
+
+.contenedor-slider .btn-siguiente{
+    right: 2%;
+}
+
+.contenedor-slider .btn-anterior i, .contenedor-slider .btn-siguiente i{
+    color: #fff;
+}
+.contenedor-slider .btn-anterior i:hover, .contenedor-slider .btn-siguiente i:hover{
+    color: #0089E0;
+}
+.tarifa{
+    padding: .5rem;
+    width:20rem;
+    height:12rem;
+}
+
+
 .section {
     position: relative;
     height: 100vh;
-     margin:50px;
+    margin:50px;
     padding: 0px;
+    background: rgba(133, 104, 73, 0.78);
 }
 
 .section .section-center {
@@ -17,7 +81,6 @@
 #booking {
     margin: 10em 0 10em 0;
     font-family: 'Alice', serif;
-    background: rgba(133, 104, 73, 0.33);
 }
 
 .booking-form {
@@ -42,7 +105,7 @@
     background-size: cover;
     background-position: center;
     padding: 25px;
-    border-radius: 6px;
+    border-radius: 15px;
     -webkit-box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -55,7 +118,6 @@
     right: 0;
     bottom: 0;
     top: 0;
-    background: rgba(133, 104, 73, 0.78);
 }
 
 .booking-form>form {

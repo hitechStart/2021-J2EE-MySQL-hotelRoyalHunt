@@ -4,7 +4,7 @@
             <div class="menu-mobile">
                 <div class="barra">
                     <a href="#" class="logo">
-                        <img src="Resourses/Images/logo.jpg" style="border-radius: 50%"alt="Royal Hunt">
+                        <img src="Resourses/Images/logo.jpg" style="border-radius: 50%" alt="Royal Hunt">
                     </a>
                     <a href="#" id="btnMenu">
                         <i class="fa fa-bars" aria-hidden="true"></i>

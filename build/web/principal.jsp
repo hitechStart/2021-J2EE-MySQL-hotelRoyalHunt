@@ -4,8 +4,6 @@
     <head>
         <%@ include file = "cabecera.jsp" %>
 
-        <title>Hotel Royal Hunt</title>
-
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
 
         <link rel="stylesheet" href="Resourses/CSS/principal.css">
@@ -79,7 +77,6 @@
                     <div class="texto-acerca-de">
                         <p>Atracciones para visitar con toda la familia y amigos
                             • Catedral de León
-
                             • Estadio de tenis
                             • Centro de exposiciones y convenciones Poliforum León
                             • Arco Triunfal Calzada de los Héroes
@@ -105,7 +102,7 @@
                         <img src="Resourses/Images/slide2.jpg" alt="Slide">
                     </div>
                     <div class="slide">
-                        <img src="Resourses/Images/slide3.jpeg" alt="Slide">
+                        <img src="Resourses/Images/slide3.jpg" alt="Slide">
                     </div>
                     <div class="slide">
                         <img src="Resourses/Images/slide4.jpg" alt="Slide">
@@ -228,7 +225,7 @@
                     </div>
                 </div>
             </section>
-
+        </section>
             <!--Incluimos el archivo de Pie de pagina-->
             <%@ include file = "footer.jsp" %>
 
@@ -246,9 +243,6 @@
             <script src="Resourses/JS/parallax.min.js"></script>
 
             <script src="Resourses/JS/prefixfree.min.js"></script>
-
-
-
     </body>
 </html>
 
