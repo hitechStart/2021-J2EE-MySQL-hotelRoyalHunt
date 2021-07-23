@@ -15,12 +15,13 @@
         <link type="text/css" rel="stylesheet" href="Resourses/CSS/bootstrap.min.css" />
 
         <!-- Custom stlylesheet -->
-        <link type="text/css" rel="stylesheet" href="Resourses/CSS/reserva.css" />
-      <link type="text/css" rel="stylesheet" href="Resourses/CSS/footer.css" />
-
+        <link type="text/css" rel="stylesheet" href="Resourses/CSS/formulario.css" />
+        <link type="text/css" rel="stylesheet" href="Resourses/CSS/footer.css" />
+        <%@ include file = "BarraRedSocial.jsp" %>
     </head>
 
     <body>
+        <%@ include file = "BarraDeMenu.jsp" %>
         <div id="booking" class="section">
             <div class="section-center">
                 <div class="container">

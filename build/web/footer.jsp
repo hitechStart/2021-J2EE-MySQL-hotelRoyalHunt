@@ -1,4 +1,4 @@
-  <div class="footer-dark ontainer-fluid">
+  <div class="footer-dark">
                 <footer>
                     <div class="container">
                         <div class="row">

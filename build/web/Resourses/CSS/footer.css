@@ -54,7 +54,7 @@
     }
 }
 
-.footer-dark .item.text p {
+.footer-dark .item.text .copyright {
 
     text-align:center;
     opacity:0.6;

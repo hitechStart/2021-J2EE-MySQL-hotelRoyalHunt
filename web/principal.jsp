@@ -7,38 +7,17 @@
         <title>Hotel Royal Hunt</title>
 
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
+
         <link rel="stylesheet" href="Resourses/CSS/principal.css">
-        <link rel="stylesheet" href="Resourses/CSS/redesSociales.css">
-        <link rel="stylesheet" type="text/css" href="Resourses/CSS/footer.css">
 
         <!--Fuentes para la barra de redes Sociales-->
         <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+        <%@ include file = "BarraRedSocial.jsp" %>
+
     </head>
     <body>
-        <!--Inicio de Barra de redes Sociales-->
-        <div class="container-bar">
-            <input type="checkbox" id="btn-social">
-            <label for="btn-social" class="fa fa-play"></label>
-            <div class="icon-social">
-                <a href="https://es-la.facebook.com/" class="fa fa-facebook">
-                    <span id="title">Facebook</span>
-                </a>
-                <a href="https://www.youtube.com/" class="fa fa-youtube">
-                    <span id="title">Youtube</span>
-                </a>
-                <a href="https://twitter.com/tweeter?lang=es" class="fa fa-twitter">
-                    <span id="title">Twitter</span>
-                </a>
-                <a href="https://www.instagram.com/?hl=es" class="fa fa-instagram">
-                    <span id="title">Instagram</span>
-                </a>
-                <a href="https://ar.pinterest.com/" class="fa fa-pinterest">
-                    <span id="title">Pinterest</span>
-                </a>
-            </div>
-        </div>
 
-        <!--Fin de Barra de redes Sociales-->
         <!-- Boton "Volver Arriba" -->
         <div class="btn-volver-arriba" id="btnVolverArriba">
             <a href="#" class="volver-arriba">
@@ -46,82 +25,7 @@
             </a>
         </div>
 
-        <!-- Encabezado -->
-        <header>
-            <!-- Versión móvil -->
-            <div class="menu-mobile">
-                <div class="barra">
-                    <img src="Resourses/Images/logo.jpg" style="border-radius: 50%"alt="Royal Hunt">
-                    </a>
-                    <a href="#" id="btnMenu">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <nav class="menu-principal">
-                    <a href="#" class="volver-arriba">INICIO</a>
-                    <a href="#proyectos" class="scroll-suave">ENTRETENIMIENTO</a>
-                    <a href="#acercaDe" class="scroll-acercaDe">SERVICIOS</a>
-                    <a href="#equipo" class="scroll-equipo">NUESTRO EQUIPO</a>
-                    <a href="./formulario.jsp">RESERVAS</a>
-                    <a href="#contacto" class="scroll-suave">SUSCRIPCION</a>
-                </nav>
-            </div>
-
-            <!-- Versión escritorio -->
-            <div class="menu-bar-pc">
-
-                <a href="#" class="logo">
-                    <img src="Resourses/Images/logo.jpg" style="border-radius:50%" alt="Royal Hunt">
-                </a>
-
-                <nav class="menu-principal">
-                    <a href="#" class="volver-arriba">INICIO</a>
-                    <a href="#proyectos" class="scroll-suave">ENTRETENIMIENTO</a>
-                    <a href="#acercaDe" class="scroll-acercaDe">SERVICIOS</a>
-                    <a href="#equipo" class="scroll-equipo">NUESTRO EQUIPO</a>
-                    <a href="./formulario.jsp">RESERVAS</a>
-                    <a href="#contacto" class="scroll-suave">SUSCRIPCION</a>
-                </nav>
-
-                <div class="top-redes">
-                    <a href="https://es-la.facebook.com/">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://twitter.com/tweeter?lang=es">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.instagram.com/?hl=es">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                </div>
-
-            </div>
-        </header>
-
-        <div class="fixed-header" id="fixedHeader">
-            <a href="#"  class="logo">
-                <img src="Resourses/Images/logo.jpg" style="border-radius:50%" alt="Royal Hunt">
-            </a>
-            <nav class="menu-principal">
-                <a href="#" class="volver-arriba">INICIO</a>
-                <a href="#proyectos" class="scroll-suave">ENTRETENIMIENTO</a>
-                <a href="#acercaDe" class="scroll-acercaDe">SERVICIOS</a>
-                <a href="#equipo" class="scroll-equipo">NUESTRO EQUIPO</a>
-                <a href="./formulario.jsp">RESERVAS</a>
-                <a href="#contacto" class="scroll-suave">SUSCRIPCION</a>
-            </nav>
-            <div class="top-redes">
-                <a href="https://es-la.facebook.com/">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="https://twitter.com/tweeter?lang=es">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.instagram.com/?hl=es">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
+        <%@ include file = "BarraDeMenu.jsp" %>
 
         <!-- Main -->
         <section class="main">
@@ -191,7 +95,8 @@
             </section>
 
             <!-- Slider -->
-            <section class="contenedor-fluid">
+
+            <section class="contenedor-slider">
                 <div class="slider" id="slider">
                     <div class="slide">
                         <img src="Resourses/Images/slide1.jpg" alt="Slide">
@@ -212,6 +117,7 @@
                 <div class="btn-siguiente" id="btnSiguiente">
                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </div>
+
             </section>
 
             <!-- Nuestro equipo -->
@@ -263,7 +169,6 @@
             <section class="info-extra">
                 <div class="contenedor">
                     <div class="info">
-
                         <div class="contenido-info">
                             <div class="icono-info">
                                 <i class="fa fa-paint-brush" aria-hidden="true"></i>
@@ -291,61 +196,58 @@
             </section>
 
             <!-- Contacto -->
-            <div class="contacto" id="contacto" data-parallax="scroll" data-image-src="img/bg-contacto.jpg">
-                <div class="contenedor">
-                    <div class="contenedor-formulario">
-                        <div class="formulario" id="formulario">
-                            <h2>Suscribete y recibe nuestras novedades</h2>
-                            <p>Recibe descuentos, promociones, nuevas actividades y espectaculos, mantente actualizado y disfruta de la vida!</p>
-                            <form>
-                                <div>
-                                    <input type="text" name="nombre" placeholder="Nombre" id="nombre">
-                                    <p class="error">Por favor escribe tu nombre</p>
-                                </div>
-                                <div>
-                                    <input type="email" name="email" placeholder="Correo electrónico" id="email">
-                                    <p class="error">Por favor escribe tu correo</p>
-                                </div>
-                                <div>
-                                    <textarea name="mensaje" placeholder="Dejanos tu opinion" id="mensaje"></textarea>
-                                    <p class="error">Por favor escribe tu mensaje</p>
-                                </div>
-                                <div>
-                                    <input type="submit" name="enviar" value="Suscribirse">
-                                </div>
-                            </form>
-                        </div>
+            <section>
+                <div class="contacto" id="contacto" data-parallax="scroll" data-image-src="img/bg-contacto.jpg">
+                    <div class="contenedor">
+                        <div class="contenedor-formulario">
+                            <div class="formulario" id="formulario">
+                                <h2>Suscribete y recibe nuestras novedades</h2>
+                                <p>Recibe descuentos, promociones, nuevas actividades y espectaculos, mantente actualizado y disfruta de la vida!</p>
+                                <form>
+                                    <div>
+                                        <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+                                        <p class="error">Por favor escribe tu nombre</p>
+                                    </div>
+                                    <div>
+                                        <input type="email" name="email" placeholder="Correo electrónico" id="email">
+                                        <p class="error">Por favor escribe tu correo</p>
+                                    </div>
+                                    <div>
+                                        <textarea name="mensaje" placeholder="Dejanos tu opinion" id="mensaje"></textarea>
+                                        <p class="error">Por favor escribe tu mensaje</p>
+                                    </div>
+                                    <div>
+                                        <input type="submit" name="enviar" value="Suscribirse">
+                                    </div>
+                                </form>
+                            </div>
 
-                        <div class="foto">
-
+                            <div class="foto">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-        </section>
+            <!--Incluimos el archivo de Pie de pagina-->
+            <%@ include file = "footer.jsp" %>
 
-        <!--Incluimos el archivo de Pie de pagina-->
-        <%@ include file = "footer.jsp" %>
-
-        <script src="Resourses/JS/jquery.min.js"></script>
-        <!-- <script src="js/banner.js"></script> -->
-        <script src="Resourses/JS/stickyHeader.js"></script>
-        <script src="Resourses/JS/scrollSuave.js"></script>
-        <script src="Resourses/JS/modal.js"></script>
-        <script src="Resourses/JS/slider.js"></script>
-        <!-- <script src="js/bgParallax.js"></script> -->
-        <script src="Resourses/JS/validacion.js"></script>
-        <script src="Resourses/JS/menuMobile.js"></script>
+            <script src="Resourses/JS/jquery.min.js"></script>
+            <script src="Resourses/JS/banner.js"></script>
+            <script src="Resourses/JS/stickyHeader.js"></script>
+            <script src="Resourses/JS/scrollSuave.js"></script>
+            <script src="Resourses/JS/modal.js"></script>
+            <script src="Resourses/JS/slider.js"></script>
+            <script src="js/bgParallax.js"></script>
+            <script src="Resourses/JS/validacion.js"></script>
+            <script src="Resourses/JS/menuMobile.js"></script>
 
 
-        <script src="Resourses/JS/parallax.min.js"></script>
-        <!-- Buscar:
-        t(e).on("ready.px.parallax.data-api",function(){t('[data-parallax="scroll"]').parallax()})}
-    
-        Reemplazar por:
-        t(function(){t('[data-parallax="scroll"]').parallax()})} -->
-        <script src="Resourses/JS/prefixfree.min.js"></script>
+            <script src="Resourses/JS/parallax.min.js"></script>
+
+            <script src="Resourses/JS/prefixfree.min.js"></script>
+
+
 
     </body>
 </html>

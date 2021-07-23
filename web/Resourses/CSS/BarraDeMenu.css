@@ -1,0 +1,75 @@
+/* ------ ENCABEZADO ------ */
+
+.menu-bar-pc{
+    width: 100%;
+    min-height: 68px;
+    border-bottom: 1px solid rgba(255,255,255, 0.15);
+    padding: 0 36px;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.logo{
+    display: inline-block;
+    width: 50px;
+}
+
+.logo img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.menu-principal a{
+    display: inline-block;
+    padding: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.876rem;
+    letter-spacing: 0;
+    line-height: 1.5em;
+    transition: all .3s ease;
+}
+
+.menu-principal a{
+    padding-right: 0;
+}
+
+.menu-principal a:hover{
+    color: #0089E0;
+}
+
+.fixed-header{
+    width: 100%;
+    min-height: 68px;
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    padding: 0 36px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: all .4s ease;
+    margin-top: -68px;
+}
+
+.fixed-header .menu-principal a, .fixed-header{
+    color: #444444;
+}
+
+.fixed-header .menu-principal a:hover{
+    color: #0089E0;
+}
+
+/*Mobile menu*/
+.menu-mobile{
+    display: none;
+}
