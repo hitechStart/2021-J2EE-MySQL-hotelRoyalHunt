@@ -25,24 +25,22 @@ public class Persona implements Serializable{
     @Basic
     private String nombre;
     private String apellido;
-    private String profesion;
-    private String cargo;
+    private String direccion;
     @Temporal(TemporalType.DATE)
     private Date fechaNac;
 
     public Persona() {
     }
 
-    public Persona(int dni, String nombre, String apellido, Date fechaNac, String profesion, String cargo) {
+    public Persona(int dni, String nombre, String apellido, Date fechaNac,String direccion) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.direccion = direccion;
         this.fechaNac = fechaNac;
-        this.profesion = profesion;
-        this.cargo = cargo;
     }
 
-    public int getDni() {
+       public int getDni() {
         return dni;
     }
 
@@ -74,25 +72,18 @@ public class Persona implements Serializable{
         this.fechaNac = fechaNac;
     }
 
-    public String getProfesion() {
-        return profesion;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setProfesion(String profesion) {
-        this.profesion = profesion;
-    }
-
-    public String getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     @Override
     public String toString() {
-        return "Persona{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", fechaNac=" + fechaNac + ", profesion=" + profesion + ", cargo=" + cargo + '}';
+        return "Persona{" + "dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", fechaNac=" + fechaNac + '}';
     }
+
 
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package persistencia;
 
 import java.io.Serializable;
@@ -19,10 +14,14 @@ import persistencia.exceptions.NonexistentEntityException;
 
 public class EmpleadoJpaController implements Serializable {
 
+     public EmpleadoJpaController(EntityManagerFactory emf) {
+        this.emf = emf;
+    }
+    private EntityManagerFactory emf = null;
+
     public EmpleadoJpaController() {
         emf = Persistence.createEntityManagerFactory("RoyalHuntPU");
     }
-    private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
@@ -131,5 +130,5 @@ public class EmpleadoJpaController implements Serializable {
             em.close();
         }
     }
-    
+
 }

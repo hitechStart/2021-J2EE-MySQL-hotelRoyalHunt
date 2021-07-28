@@ -37,20 +37,20 @@
 
                                     </div>
                                 </form>
-                                <form action="principal.jsp"  method="POST">
+                                <form action="SvEmpleado"  method="POST">
                                     <div class="sign-up-htm">
 
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="group">
                                                     <label for="user" class="label">DNI</label>
-                                                    <input id="user" type="text" class="input" required>
+                                                    <input id="user" type="text" name="dni" class="input" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6"> 
                                                 <div class="group">
                                                     <label for="user" class="label">Nombre</label>
-                                                    <input id="user" type="text" class="input" required>
+                                                    <input id="user" type="text" name="nombre" class="input" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -59,13 +59,13 @@
                                             <div class="col-md-6">
                                                 <div class="group">
                                                     <label for="user" class="label">APELLIDO</label>
-                                                    <input id="user" type="text" class="input" required>
+                                                    <input id="user" type="text" name="apellido" class="input" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6"> 
                                                 <div class="group">
                                                     <label for="user" class="label">NACIMIENTO</label>
-                                                    <input id="user" type="date" class="input" required>
+                                                    <input id="user" type="date" name="fechaNac" class="input" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -74,13 +74,13 @@
                                             <div class="col-md-6">
                                                 <div class="group">
                                                     <label for="user" class="label">DIRECCION</label>
-                                                    <input id="user" type="text" class="input" required>
+                                                    <input id="user" type="text" name="direccion" class="input" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6"> 
                                                 <div class="group">
                                                     <label for="user" class="label">CARGO</label>
-                                                    <input id="user" type="text" class="input" required>
+                                                    <input id="user" type="text" name="cargo" class="input" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -91,13 +91,13 @@
                                             <div class="col-md-6">
                                                 <div class="group">
                                                     <label for="user" class="label">USUARIO</label>
-                                                    <input id="user" type="text" class="input">
+                                                    <input id="user" type="text" name="usuario" class="input">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="group">
                                                     <label for="pass" class="label">PASSWORD</label>
-                                                    <input id="pass" type="password" class="input" data-type="password">
+                                                    <input id="pass" type="password" name="password" class="input" data-type="password">
                                                 </div>
                                             </div>
                                         </div>
