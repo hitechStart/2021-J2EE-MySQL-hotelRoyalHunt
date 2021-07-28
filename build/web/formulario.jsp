@@ -267,7 +267,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span class="form-label">MONTO TOTAL</span>
-                                            <input class="form-control" type="number" name="montoTotal" required>
+                                            <input class="form-control" type="number"  step="any" name="montoTotal" required>
                                         </div>
                                     </div>
                                 </div>

@@ -10,9 +10,10 @@ public class ControladoraPersistencia {
     HotelJpaController hotelJPA = new HotelJpaController();
     HuespedJpaController huespedJPA = new HuespedJpaController();
     PersonaJpaController personaJPA = new PersonaJpaController();
-    ReservaJpaController reserva = new ReservaJpaController();
+    ReservaJpaController reservaJPA = new ReservaJpaController();
 
     public void crearReserva(Hotel hotel) throws Exception {
         hotelJPA.create(hotel);
     }
+
 }

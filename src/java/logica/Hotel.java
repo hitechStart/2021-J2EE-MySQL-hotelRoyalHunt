@@ -1,18 +1,18 @@
 package logica;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="hotel")
+@Table(name = "hotel")
 public class Hotel implements Serializable {
 
     @Id
@@ -23,18 +23,16 @@ public class Hotel implements Serializable {
     private int codigoPostal;
     private String localidad;
     private String provincia;
-    
-    @OneToMany
-    private List <Habitacion> habitacion=new ArrayList<Habitacion>();
-    
-    @OneToMany
-    private List <Reserva> reserva=new ArrayList<Reserva>();
-    
-    @OneToMany
-    private List <Empleado> empleado=new ArrayList<Empleado>();
+
+    @OneToMany(cascade = CascadeType.PERSIST)
+    private List<Habitacion> habitacion;
+    @OneToMany(cascade = CascadeType.PERSIST)
+    private List<Reserva> reserva;
+    @OneToMany(cascade = CascadeType.PERSIST)
+    private List<Empleado> empleado;
 
     public Hotel() {
-       
+
     }
 
     public Hotel(int idHotel, String direccion, int codigoPostal, String localidad, String provincia) {
@@ -101,9 +99,6 @@ public class Hotel implements Serializable {
         this.reserva = reserva;
     }
 
-
- 
-
     public List<Empleado> getEmpleado() {
         return empleado;
     }
@@ -112,7 +107,7 @@ public class Hotel implements Serializable {
         this.empleado = empleado;
     }
 
-
+   
 
     @Override
     public String toString() {

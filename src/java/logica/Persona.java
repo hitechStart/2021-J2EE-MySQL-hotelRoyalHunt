@@ -15,6 +15,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="persona")
+
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Persona implements Serializable{
 

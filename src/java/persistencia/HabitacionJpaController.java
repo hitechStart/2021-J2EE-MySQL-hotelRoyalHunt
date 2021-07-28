@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package persistencia;
 
 import java.io.Serializable;
@@ -17,14 +12,10 @@ import javax.persistence.criteria.Root;
 import logica.Habitacion;
 import persistencia.exceptions.NonexistentEntityException;
 
-/**
- *
- * @author Maxi
- */
 public class HabitacionJpaController implements Serializable {
 
     public HabitacionJpaController() {
-        emf = Persistence.createEntityManagerFactory("RoyalHuntPU");
+       emf = Persistence.createEntityManagerFactory("RoyalHuntPU");
     }
     private EntityManagerFactory emf = null;
 

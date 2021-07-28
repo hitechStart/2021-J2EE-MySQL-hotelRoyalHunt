@@ -17,11 +17,10 @@ import javax.persistence.criteria.Root;
 import logica.Empleado;
 import persistencia.exceptions.NonexistentEntityException;
 
-
 public class EmpleadoJpaController implements Serializable {
 
     public EmpleadoJpaController() {
-         emf = Persistence.createEntityManagerFactory("RoyalHuntPU");
+        emf = Persistence.createEntityManagerFactory("RoyalHuntPU");
     }
     private EntityManagerFactory emf = null;
 
