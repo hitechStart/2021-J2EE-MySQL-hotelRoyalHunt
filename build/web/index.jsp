@@ -20,15 +20,15 @@
                             <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">INICIO</label>
                             <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">REGISTRO</label>
                             <div class="login-form ">
-                                <form action="principal.jsp"  method="POST">
+                                <form action="SvUsuario"  method="POST">
                                     <div class="sign-in-htm">
                                         <div class="group">
                                             <label for="user" class="label">USUARIO</label>
-                                            <input id="user" type="text" class="input">
+                                            <input id="user" type="text" name="usuario" class="input">
                                         </div>
                                         <div class="group">
                                             <label for="pass" class="label">PASSWORD</label>
-                                            <input id="pass" type="password" class="input" data-type="password">
+                                            <input id="pass" type="password" name="password" class="input" data-type="password">
                                         </div>
                                         <div class="group">
                                             <input type="submit" class="button" value="INICIAR">

@@ -48,6 +48,7 @@ public class SvEmpleado extends HttpServlet {
         request.getSession().setAttribute("usuario", usuario);
         request.getSession().setAttribute("password", password);
 
+       
         ControladoraPersona ctrl_persona = new ControladoraPersona();
         ControladoraEmpleado ctrl = new ControladoraEmpleado();
 

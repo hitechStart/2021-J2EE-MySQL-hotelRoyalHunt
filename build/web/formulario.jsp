@@ -38,16 +38,68 @@
                                         <h4 class="my-0 font-weight-normal">SINGLE</h4>
                                     </div>
                                     <div class="card-body">
-                                        <h1 class="card-title pricing-card-title">$12600</h1>
-                                        <ul class="list-unstyled mt-3 mb-4">
-                                            <li>Mini Bar</li>
-                                            <li>Jacuzzi</li>
-                                            <li>Aire acondicionado</li>
-                                            <li>Tv cable</li>
-                                            <li>Periodico</li>
-                                            <li>wifi</li>
-                                        </ul>
+                                        <form action="SvHabitacion" method="POST">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="NUMERO" name="idHabitacion" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="PISO" name="piso" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label"></span>
+                                                        <select class="form-control"  name="tematica" required>
+                                                            <option value="" selected hidden>TEMATICA</option>
+                                                            <option>Private Room (1 to 2 People)</option>
+                                                            <option>Family Room (1 to 4 People)</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label"></span>
+                                                        <select class="form-control"  name="tipo" required>
+                                                            <option value="" selected hidden>TIPO</option>
+                                                            <option>SINGLE</option>
+                                                            <option>DOBLE</option>
+                                                             <option>TRIPLE</option>
+                                                              <option>MULTIPLE</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="PRECIO POR NOCHE" name="precio" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="DISPONIBILIDAD" name="disponibilidad" required>
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <button type="submit" class="submit-btn">REGISTRAR</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -69,16 +121,66 @@
                                         <h4 class="my-0 font-weight-normal">DOBLE</h4>
                                     </div>
                                     <div class="card-body">
-                                        <h1 class="card-title pricing-card-title">$20500</h1>
-                                        <ul class="list-unstyled mt-3 mb-4">
-                                            <li>Mini Bar</li>
-                                            <li>Jacuzzi</li>
-                                            <li>Aire acondicionado</li>
-                                            <li>Tv cable</li>
-                                            <li>wifi</li>
-                                            <li>Servicio de limpieza</li>
-                                            <li>Telefono</li>
-                                        </ul>
+                                        <form action="SvReserva" method="POST">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="NUMERO" name="idReserva" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="PISO" name="documento" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label"></span>
+                                                        <select class="form-control"  name="tematica" required>
+                                                            <option value="" selected hidden>TEMATICA</option>
+                                                            <option>Private Room (1 to 2 People)</option>
+                                                            <option>Family Room (1 to 4 People)</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label"></span>
+                                                        <select class="form-control"  name="tipo" required>
+                                                            <option value="" selected hidden>TIPO</option>
+                                                            <option>Private Room (1 to 2 People)</option>
+                                                            <option>Family Room (1 to 4 People)</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="PRECIO POR NOCHE" name="idReserva" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="DISPONIBILIDAD" name="documento" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <button type="submit" class="submit-btn">REGISTRAR</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -97,17 +199,66 @@
                                         <h4 class="my-0 font-weight-normal">TRIPLE</h4>
                                     </div>
                                     <div class="card-body">
-                                        <h1 class="card-title pricing-card-title">$29600</h1>
-                                        <ul class="list-unstyled mt-3 mb-4">
-                                            <li>Mini Bar</li>
-                                            <li>Jacuzzi</li>
-                                            <li>Aire acondicionado</li>
-                                            <li>Tv cable</li>
+                                        <form action="SvReserva" method="POST">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="NUMERO" name="idReserva" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="PISO" name="documento" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label"></span>
+                                                        <select class="form-control"  name="tematica" required>
+                                                            <option value="" selected hidden>TEMATICA</option>
+                                                            <option>Private Room (1 to 2 People)</option>
+                                                            <option>Family Room (1 to 4 People)</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label"></span>
+                                                        <select class="form-control"  name="tipo" required>
+                                                            <option value="" selected hidden>TIPO</option>
+                                                            <option>Private Room (1 to 2 People)</option>
+                                                            <option>Family Room (1 to 4 People)</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="PRECIO POR NOCHE" name="idReserva" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="DISPONIBILIDAD" name="documento" required>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                            <li>wifi</li>
-                                            <li>Servicio de limpieza</li>
-
-                                            <li>Pack de Bienvenida</li>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <button type="submit" class="submit-btn">REGISTRAR</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -127,15 +278,66 @@
                                     </div>
                                     <div class="card-body">
                                         <h1 class="card-title pricing-card-title">$41700</h1>
-                                        <ul class="list-unstyled mt-3 mb-4">
-                                            <li>Mini Bar</li>
-                                            <li>Jacuzzi</li>
-                                            <li>Aire acondicionado</li>
-                                            <li>Tv cable</li>
-                                            <li>Periodico</li>
-                                            <li>wifi</li>
-                                            <li>Pack de Bienvenida</li>
-                                        </ul>
+                                        <form action="SvReserva" method="POST">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="NUMERO" name="idReserva" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="PISO" name="documento" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label"></span>
+                                                        <select class="form-control"  name="tematica" required>
+                                                            <option value="" selected hidden>TEMATICA</option>
+                                                            <option>Private Room (1 to 2 People)</option>
+                                                            <option>Family Room (1 to 4 People)</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label"></span>
+                                                        <select class="form-control"  name="tipo" required>
+                                                            <option value="" selected hidden>TIPO</option>
+                                                            <option>Private Room (1 to 2 People)</option>
+                                                            <option>Family Room (1 to 4 People)</option>
+                                                        </select>
+                                                        <span class="select-arrow"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="PRECIO POR NOCHE" name="idReserva" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <div class="form-label"></div>
+                                                        <input class="form-control" type="number" placeholder="DISPONIBILIDAD" name="documento" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <button type="submit" class="submit-btn">REGISTRAR</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +368,7 @@
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
                                 </div>
                             </div>
-                            <form action="SvHotel" method="POST">
+                            <form action="SvReserva" method="POST">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -177,7 +379,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <div class="form-label">DOCUMENTO</div>
-                                            <input class="form-control" type="number" name="documento" required>
+                                            <input class="form-control" type="number" name="dni" required>
                                         </div>
                                     </div>
                                 </div>
@@ -196,10 +398,22 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-4">
                                         <div class="form-group">
-                                            <span class="form-label">FECHA DE NACIMIENTO</span>
+                                            <span class="form-label">NACIMIENTO</span>
                                             <input class="form-control" type="date" name="fechaNac" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <span class="form-label">DIRECCION</span>
+                                            <input class="form-control" type="text" name="direccion" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <span class="form-label">PROFESION</span>
+                                            <input class="form-control" type="text" name="profesion" required>
                                         </div>
                                     </div>
                                 </div>
@@ -233,7 +447,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <span class="form-label">TEMATICA</span>
                                             <select class="form-control"  name="tematica" required>
@@ -244,16 +458,16 @@
                                             <span class="select-arrow"></span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-group">
-                                        <span class="form-label">TIPO DE HABITACION</span>
-                                        <select class="form-control"  name="tipo" required>
-                                            <option value="" selected hidden>Select room type</option>
-                                            <option>Private Room (1 to 2 People)</option>
-                                            <option>Family Room (1 to 4 People)</option>
-                                        </select>
-                                        <span class="select-arrow"></span>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <span class="form-label">TIPO DE HABITACION</span>
+                                            <select class="form-control"  name="tipo" required>
+                                                <option value="" selected hidden>Select room type</option>
+                                                <option>Private Room (1 to 2 People)</option>
+                                                <option>Family Room (1 to 4 People)</option>
+                                            </select>
+                                            <span class="select-arrow"></span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">

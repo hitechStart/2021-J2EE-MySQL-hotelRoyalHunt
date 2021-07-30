@@ -1,10 +1,8 @@
 package logica;
 
-import java.text.ParseException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import persistencia.ControladoraPersistencia;
 
 public class ControladoraEmpleado {
@@ -14,10 +12,10 @@ public class ControladoraEmpleado {
     public void crearEmpleado(String dni, String nombre, String apellido,
             String fechaNac, String direccion, String cargo, String usuario, String password) throws Exception {
 
-        SimpleDateFormat formatter1 = new SimpleDateFormat("dd-MM-yyyy");
-        Date date;
-        date = formatter1.parse(fechaNac);
-
+        DateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        Date fechaDate = null;
+        fechaDate = formato.parse(fechaNac);
+        
         int documento = Integer.parseInt(dni);
 
         Empleado empleado = new Empleado();
@@ -25,13 +23,13 @@ public class ControladoraEmpleado {
         empleado.setDni(documento);
         empleado.setNombre(nombre);
         empleado.setApellido(apellido);
-        empleado.setFechaNac(date);
+        empleado.setFechaNac(fechaDate);
         empleado.setDireccion(direccion);
         empleado.setCargo(cargo);
         empleado.setUsuario(usuario);
         empleado.setPassword(password);
-        
+
         control.crearEmpleado(empleado);
-       
+
     }
 }
