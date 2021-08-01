@@ -1,8 +1,8 @@
 package servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import logica.ControladoraFactura;
 import logica.ControladoraHuesped;
 import logica.ControladoraPersona;
@@ -25,8 +26,7 @@ public class SvReserva extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+            throws ServletException, IOException {;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class SvReserva extends HttpServlet {
 
         String idFactura = idReserva;
 
-        ArrayList<String> descripcion = new ArrayList<String>();
+        ArrayList<String> descripcion = new ArrayList<>();
 
         descripcion.add(dni);
         descripcion.add(nombre);
@@ -83,13 +83,13 @@ public class SvReserva extends HttpServlet {
         request.getSession().setAttribute("numPersonas", numPersonas);
         request.getSession().setAttribute("montoTotal", montoTotal);
 
+
         ControladoraPersona ctrl_persona = new ControladoraPersona();
         ControladoraHuesped ctrl_huesped = new ControladoraHuesped();
         ControladoraFactura ctrl_factura = new ControladoraFactura();
 
         ControladoraReserva ctrl_reserva = new ControladoraReserva();
         try {
-
             ctrl_persona.crearPersona(dni, nombre, apellido, fechaNac, direccion);
             ctrl_huesped.crearHuesped(dni, nombre, apellido, fechaNac, direccion, profesion);
             ctrl_reserva.crearReserva(idReserva, dni, nombre, apellido, fechaNac, direccion, profesion,

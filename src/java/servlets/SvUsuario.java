@@ -16,7 +16,7 @@ public class SvUsuario extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
+        
     }
 
     @Override
@@ -32,22 +32,21 @@ public class SvUsuario extends HttpServlet {
         String usuario = request.getParameter("usuario");
         String password = request.getParameter("password");
 
-        ControladoraUsuario control=new ControladoraUsuario();
-        boolean autorizado=control.verificarEmpleado(usuario,password);
-        
-        if(autorizado){
-            
-        HttpSession misession=request.getSession(true);
-        
-        misession.setAttribute("usuario",usuario);
-        misession.setAttribute("password",password);
-        
-        response.sendRedirect("principal.jsp");
-        }else{
-        response.sendRedirect("index.jsp");
+        ControladoraUsuario control = new ControladoraUsuario();
+        boolean autorizado = control.verificarEmpleado(usuario, password);
+
+        if (autorizado) {
+
+            HttpSession misession = request.getSession(true);
+
+            misession.setAttribute("usuario", usuario);
+            misession.setAttribute("password", password);
+
+            response.sendRedirect("principal.jsp");
+        } else {
+            response.sendRedirect("index.jsp");
         }
-         
-    
+
     }
 
     @Override

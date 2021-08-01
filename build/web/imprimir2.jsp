@@ -8,26 +8,29 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
-          <tbody>
-        <% HttpSession misession = request.getSession();
-            List<Huesped> listaHuesped = (List) request.getSession().getAttribute("listaHuesped");
 
+    <tbody>
+    <h3>Empleado: <%=session.getAttribute("usuario")%></h3>
+    <br>
+    <br>
+    <% HttpSession misession = request.getSession();
+        List<Huesped> listaHuesped = (List) request.getSession().getAttribute("listaHuesped");
+
+    %>
+    <tr>
+        <%                for (Huesped huesped : listaHuesped) {
+                int dni = huesped.getDni();
+                String nombre = huesped.getNombre();
+                String Apellido = huesped.getApellido();
         %>
-        <tr>
-            <%               
-                for (Huesped huesped : listaHuesped) {
-                    int dni = huesped.getDni();
-                    String nombre = huesped.getNombre();
-                    String Apellido = huesped.getApellido();
-            %>
-            
-            <td><%=dni%></td>
-            <td><%=nombre%></td>
-            <td><%=Apellido%></td>
-        </tr>
 
-        <%}%>
-    </tbody>
-    </body>
+        <td><%=dni%></td>
+        <td><%=nombre%></td>
+        <td><%=Apellido%></td>
+    <br>
+</tr>
+
+<%}%>
+</tbody>
+</body>
 </html>

@@ -43,12 +43,16 @@ public class ControladoraPersistencia {
     }
 
     public List<Empleado> traerEmpleado() {
-        System.out.println("3");
 
         return empleadoJPA.findEmpleadoEntities();
     }
     public List<Huesped> traerHuesped() {
 
         return huespedJPA.findHuespedEntities();
+    }
+    
+    public List<Reserva> traerReservaDia() {
+
+        return reservaJPA.findReservaEntities();
     }
 }
