@@ -1,3 +1,4 @@
+<%@page  import="javax.servlet.http.HttpSession"%>
 <%@page import="java.util.List"%>
 <%@page import="logica.Huesped"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -13,6 +14,8 @@
     <h3>Empleado: <%=session.getAttribute("usuario")%></h3>
     <br>
     <br>
+     <p>Numero de empleado <%=session.getAttribute("usuario")%></p>
+     
     <% HttpSession misession = request.getSession();
         List<Huesped> listaHuesped = (List) request.getSession().getAttribute("listaHuesped");
 

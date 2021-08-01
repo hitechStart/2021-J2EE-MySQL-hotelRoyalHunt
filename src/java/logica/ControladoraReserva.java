@@ -14,7 +14,7 @@ public class ControladoraReserva {
     public void crearReserva(String idReserva, String dni, String nombre, String apellido,
             String fechaNac, String direccion, String profesion,
             String check_in, String check_out, String idHabitacion, String piso,
-            String tematica, String tipo, String numPersonas)
+            String tematica, String tipo, String numPersonas, String user)
             throws ParseException, Exception {
 
         Reserva reserva = new Reserva();
@@ -58,6 +58,7 @@ public class ControladoraReserva {
         habitacion.setPiso(floor);
 
         reserva.setHabitacion(habitacion);
+        reserva.setUsuario(user);
 
         control.crearReserva(reserva);
     }
@@ -91,5 +92,53 @@ public class ControladoraReserva {
     public List<Reserva> traerReservaDia() {
 
         return control.traerReservaDia();
+    }
+
+    public List<Reserva> verificarUsuario(String buscarReserva) throws ParseException {
+
+        List<Reserva> listaUser = control.traerReserva();
+        ArrayList<Reserva> listaCompleta = new ArrayList<>();
+
+        if (listaUser != null) {
+            for (Reserva reservaUser : listaUser) {
+
+                //buscarReserva
+                if (reservaUser.getUsuario().equalsIgnoreCase(buscarReserva)) {
+
+                    listaCompleta.add(reservaUser);
+                }
+            }
+            return listaCompleta;
+        }
+        return listaCompleta;
+    }
+
+    public List<Reserva> verificarFechas(int huesped, String fechaDesde, String fechaHasta) throws ParseException {
+
+        List<Reserva> reserva = control.traerReserva();
+        List<Reserva> listaCompleta = new ArrayList<>();
+
+        String fecha_in;
+        String fecha_out;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+        if (reserva != null) {
+            for (Reserva reservaFechas : reserva) {
+
+                fecha_in = formatter.format(reservaFechas.getCheck_in());
+                fecha_out = formatter.format(reservaFechas.getCheck_out());
+               
+                System.out.println("Desde :"+fecha_in.compareTo(fechaDesde)
+                        +" Hasta :"+fecha_out.compareTo(fechaHasta));
+                //   || (fecha_in.compareTo(fecha) < 0 && 1 <= fecha_out.compareTo(fecha))
+                if (huesped == reservaFechas.getHuesped().getDni()
+                        && fecha_in.compareTo(fechaDesde) <=0 && fecha_out.compareTo(fechaHasta)<=0) {
+
+                    listaCompleta.add(reservaFechas);
+                }
+            }
+            return listaCompleta;
+        }
+        return listaCompleta;
     }
 }

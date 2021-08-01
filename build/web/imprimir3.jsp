@@ -1,3 +1,4 @@
+<%@page  import="javax.servlet.http.HttpSession"%>
 <%@page import="java.util.List"%>
 <%@page import="logica.Reserva"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -8,7 +9,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h3>Empleado: <%=session.getAttribute("usuario")%></h3>
+        <h3>Empleado:<%=session.getAttribute("usuario")%></h3>
         <br>
         <br>
         <h3>reservas realizadas en un determinado día. </h3>

@@ -12,14 +12,14 @@
         <h3>Empleado:<%=session.getAttribute("usuario")%></h3>
         <br>
         <br>
-        <h3>reservas realizadas en un determinado día. </h3>
+        <h3>reservas realizadas Por un empleado. </h3>
     <tbody>
         <% HttpSession misession = request.getSession();
-            List<Reserva> verificarFecha = (List) request.getSession().getAttribute("verificarFecha");
+            List<Reserva> verificarUsuario = (List) request.getSession().getAttribute("verificarUsuario");
 
         %>
         <tr>
-            <%                for (Reserva reserva : verificarFecha) {
+            <%                for (Reserva reserva : verificarUsuario) {
                     int idReserva = reserva.getIdReserva();
 
             %>

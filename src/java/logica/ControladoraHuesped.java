@@ -33,7 +33,7 @@ public class ControladoraHuesped {
       }
 
     public List<Huesped> traerHuesped() {
-        System.out.println("Dos");
+       
        return  control.traerHuesped();       
     }
        

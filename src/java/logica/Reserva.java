@@ -28,6 +28,7 @@ public class Reserva implements Serializable {
     private Date check_out;
     @Basic
     private double cantDias;
+    private String user;
     @ManyToOne
     Huesped huesped;
     @ManyToOne
@@ -36,16 +37,17 @@ public class Reserva implements Serializable {
     public Reserva() {
     }
 
-    public Reserva(int idReserva, Date check_in, Date check_out, double cantDias, Huesped huesped, Habitacion habitacion) {
+    public Reserva(int idReserva, Date check_in, Date check_out, double cantDias, String user, Huesped huesped, Habitacion habitacion) {
         this.idReserva = idReserva;
         this.check_in = check_in;
         this.check_out = check_out;
         this.cantDias = cantDias;
+        this.user = user;
         this.huesped = huesped;
         this.habitacion = habitacion;
     }
 
-    public int getIdReserva() {
+      public int getIdReserva() {
         return idReserva;
     }
 
@@ -93,9 +95,22 @@ public class Reserva implements Serializable {
         this.habitacion = habitacion;
     }
 
+    public String getUsuario() {
+        return user;
+    }
+
+    public void setUsuario(String usuario) {
+        this.user = usuario;
+    }
+
     @Override
     public String toString() {
-        return "Reserva{" + "idReserva=" + idReserva + ", check_in=" + check_in + ", check_out=" + check_out + ", cantDias=" + cantDias + ", huesped=" + huesped + ", habitacion=" + habitacion + '}';
+        return "Reserva{" + "idReserva=" + idReserva + ", check_in="
+                + check_in + ", check_out=" + check_out + ", cantDias=" + 
+                cantDias + ", usuario=" + user + ", huesped=" + huesped +
+                ", habitacion=" + habitacion + '}';
     }
+
+   
 
 }

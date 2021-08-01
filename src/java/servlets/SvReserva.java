@@ -1,7 +1,6 @@
 package servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -83,6 +82,8 @@ public class SvReserva extends HttpServlet {
         request.getSession().setAttribute("numPersonas", numPersonas);
         request.getSession().setAttribute("montoTotal", montoTotal);
 
+        HttpSession session = request.getSession();
+        String user = (String) session.getAttribute("usuario");
 
         ControladoraPersona ctrl_persona = new ControladoraPersona();
         ControladoraHuesped ctrl_huesped = new ControladoraHuesped();
@@ -93,7 +94,7 @@ public class SvReserva extends HttpServlet {
             ctrl_persona.crearPersona(dni, nombre, apellido, fechaNac, direccion);
             ctrl_huesped.crearHuesped(dni, nombre, apellido, fechaNac, direccion, profesion);
             ctrl_reserva.crearReserva(idReserva, dni, nombre, apellido, fechaNac, direccion, profesion,
-                    check_in, check_out, idHabitacion, piso, tematica, tipo, numPersonas);
+                    check_in, check_out, idHabitacion, piso, tematica, tipo, numPersonas,user);
             //ctrl_factura.crearFactura(dni, descripcion, montoTotal);
 
         } catch (Exception ex) {
