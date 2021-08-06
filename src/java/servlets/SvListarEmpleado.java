@@ -26,7 +26,7 @@ public class SvListarEmpleado extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         String buscarReserva = request.getParameter("buscarReserva");
         request.getSession().setAttribute("buscarReserva", buscarReserva);
 
@@ -39,7 +39,8 @@ public class SvListarEmpleado extends HttpServlet {
 
                 HttpSession misession = request.getSession(true);
                 misession.setAttribute("verificarUsuario", verificarUsuario);
-                response.sendRedirect("imprimir4.jsp");
+                response.sendRedirect("imprimirEmpleado.jsp");
+
             }
         } catch (ParseException ex) {
             Logger.getLogger(SvConsultaReservaDia.class.getName()).log(Level.SEVERE, null, ex);

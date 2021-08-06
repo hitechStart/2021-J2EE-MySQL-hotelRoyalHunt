@@ -46,7 +46,8 @@ public class SvD extends HttpServlet {
 
                 HttpSession misession = request.getSession(true);
                 misession.setAttribute("verificarFechas", verificarFechas);
-                response.sendRedirect("imprimir5.jsp");
+                response.sendRedirect("imprimirRangoFecha.jsp");
+               
             }
         } catch (ParseException ex) {
             Logger.getLogger(SvConsultaReservaDia.class.getName()).log(Level.SEVERE, null, ex);

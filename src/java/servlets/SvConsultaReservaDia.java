@@ -39,7 +39,8 @@ public class SvConsultaReservaDia extends HttpServlet {
 
                 HttpSession misession = request.getSession(true);
                 misession.setAttribute("verificarFecha", verificarFecha);
-                response.sendRedirect("imprimir3.jsp");
+               response.sendRedirect("imprimirReservaDia.jsp");
+               
             }
         } catch (ParseException ex) {
             Logger.getLogger(SvConsultaReservaDia.class.getName()).log(Level.SEVERE, null, ex);

@@ -29,7 +29,12 @@ public class SVconsultaHuesped extends HttpServlet {
 
         HttpSession misession = request.getSession();
         misession.setAttribute("listaHuesped", listaHuesped);
-        response.sendRedirect("imprimir2.jsp");
+        
+        response.sendRedirect("imprimirHuesped.jsp");
+       
+        
+   
+        
     }
 
     @Override

@@ -12,7 +12,7 @@
         <h3>Empleado:<%=session.getAttribute("usuario")%></h3>
         <br>
         <br>
-        <h3>reservas realizadas en un determinado día. </h3>
+        <h3>A-reservas realizadas en un determinado día. </h3>
     <tbody>
         <% HttpSession misession = request.getSession();
             List<Reserva> verificarFecha = (List) request.getSession().getAttribute("verificarFecha");
@@ -31,5 +31,16 @@
 
 <%}%>
 </tbody>
+<div class="col">
+    <form action="./PanelControl.jsp" method="GET">
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="submit-btn">VOLVER</button>
+            </div>
+        </div>
+
+    </form>
+</div>
 </body>
 </html>

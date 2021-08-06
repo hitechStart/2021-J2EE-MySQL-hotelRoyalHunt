@@ -9,18 +9,23 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <p>C-Lista de las reservas realizadas por un determinado empleado.</p>   
         <h3>Empleado:<%=session.getAttribute("usuario")%></h3>
         <br>
         <br>
-        <h3>reservas realizadas Por un empleado. </h3>
+      
+            
     <tbody>
+         
+        
         <% HttpSession misession = request.getSession();
             List<Reserva> verificarUsuario = (List) request.getSession().getAttribute("verificarUsuario");
 
         %>
         <tr>
-            <%                for (Reserva reserva : verificarUsuario) {
+            <%for (Reserva reserva : verificarUsuario) {
                     int idReserva = reserva.getIdReserva();
+                    
 
             %>
 
@@ -31,5 +36,16 @@
 
 <%}%>
 </tbody>
+<div class="col">
+    <form action="./PanelControl.jsp" method="GET">
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="submit-btn">VOLVER</button>
+            </div>
+        </div>
+
+    </form>
+</div>
 </body>
 </html>

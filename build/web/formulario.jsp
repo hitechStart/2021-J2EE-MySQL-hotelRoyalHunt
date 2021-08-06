@@ -367,7 +367,7 @@
                                     <h2>Make your reservation</h2>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
                                 </div>
-                            </div>
+                            </div><!--SvReserva-->
                             <form action="SvReserva" method="POST">
                                 <div class="row">
                                     <div class="col-md-6">

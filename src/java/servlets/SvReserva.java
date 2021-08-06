@@ -100,7 +100,7 @@ public class SvReserva extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(SvReserva.class.getName()).log(Level.SEVERE, null, ex);
         }
-        response.sendRedirect("imprimir.jsp");
+        response.sendRedirect("imprimirEmpleado.jsp");
     }
 
     @Override

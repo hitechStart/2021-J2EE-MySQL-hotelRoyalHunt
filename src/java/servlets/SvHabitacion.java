@@ -48,6 +48,8 @@ public class SvHabitacion extends HttpServlet {
           
         try {
             ctrl_habitacion.crearHabitacion(idHabitacion, piso, tematica, tipo, disponibilidad, precio);
+             response.sendRedirect("PanelControl.jsp");
+            
         } catch (Exception ex) {
             Logger.getLogger(SvHabitacion.class.getName()).log(Level.SEVERE, null, ex);
         }

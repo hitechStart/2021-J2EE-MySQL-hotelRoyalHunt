@@ -14,8 +14,9 @@
     <h3>Empleado: <%=session.getAttribute("usuario")%></h3>
     <br>
     <br>
-     <p>Numero de empleado <%=session.getAttribute("usuario")%></p>
-     
+    
+    <p>B-Todos los huéspedes registrados en el sistema:</p>
+    <br>
     <% HttpSession misession = request.getSession();
         List<Huesped> listaHuesped = (List) request.getSession().getAttribute("listaHuesped");
 
@@ -35,5 +36,17 @@
 
 <%}%>
 </tbody>
+
+<div class="col">
+    <form action="./PanelControl.jsp" method="GET">
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="submit-btn">VOLVER</button>
+            </div>
+        </div>
+
+    </form>
+</div>
 </body>
 </html>
