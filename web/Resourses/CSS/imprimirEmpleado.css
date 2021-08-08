@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image: url("../Images/fondoEmpleado.jpg");
+    background-repeat:no-repeat;
+    width:100%;
+   
+}
+.usuario h3{
+     font-size: 3rem;
+    font-family: 'MonteCarlo', cursive;
+    text-align: right;
+}
+.item{
+    font-size: 3rem;
+    font-family: 'MonteCarlo', cursive;
+    text-align: center; 
+}
+.marco{
+    margin: auto;
+    margin-top:10rem;
+    margin-bottom: 10rem;
+    width: 50%;
+    height: auto;
+    background-color: #FFFF66;
+    border-radius: 15px;
+}
+.espacio{
+    width: 100%;
+    height: 4rem;
+    background-color: red;
+}
+#boton{
+    margin-left: 38%;
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+    background-color:#3333FF;
+    color:white;
+    font-weight: bold;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 0px;
+    left:5px;
+}

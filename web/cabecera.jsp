@@ -32,5 +32,5 @@
 <link rel="stylesheet" href="Resourses/CSS/redesSociales.css">
 <link rel="stylesheet" type="text/css" href="Resourses/CSS/footer.css">
 <link rel="stylesheet" type="text/css" href="Resourses/CSS/BarraDeMenu.css">
-
+ <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
  <title>Hotel Royal Hunt</title>

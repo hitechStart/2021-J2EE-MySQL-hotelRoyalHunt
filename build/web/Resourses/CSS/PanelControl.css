@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+}
+.listas{
+    text-align: center;
+}
+.titulo{
+    font-family: 'Poppins', sans-serif;
+}
+.listaOpciones{
+    list-style-type: none;
+    padding:2px 0 2px 200px;
+    text-align: justify;
+}
+.espacioTexto{
+    display:inline-block;
+    padding:0 1rem 0.5rem 1rem;
+    font-family:'Poppins',sans-serif;
+}
+.imgLeft{
+    display:block;
+    background-image: url("../Images/imgRight.jpg");
+    background-color: black;
+}
+.identificacion{
+    font-family: 'Deutsch Gothic';
+    font-size: 1.5rem;
+    text-align: center;
+}
+#coronaIzquierda{
+    width: 2.5rem;
+    height: auto;
+
+    border-radius: 50%;
+}
+#coronaDerecha{
+    width: 2.5rem;
+    height: auto;
+
+    border-radius: 50%;
+}
+.panel{ 
+    display:block;
+    border: 2px solid black;
+}
+.imgRight{
+    display:block;
+    background-image: url("../Images/imgLeft.jpg");
+    background-color: black;
+}
+.centerForm{
+    display: block;
+    position: relative;
+    height:15rem;
+    font-family: 'Deutsch Gothic';
+    text-align: center;
+}
+.espacio{
+    width: 100%;
+    height: 0.5rem;
+}
+#imagen{
+    height:30%;
+}
+#boton{
+    width: 90%;
+    height: 40px;
+    font-family: 'Deutsch Gothic';
+    font-size: 20px;
+    background-color:#3333FF;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 10px;
+    left:5px;
+}
+#btn{
+    width: 90%;
+    height: 40px;
+    font-family: 'Deutsch Gothic';
+    font-size: 20px;
+    background-color:#3333FF;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 5px;
+    left:5px;
+}
+.contenedor, h2{
+    display: block;
+    width: 100%;
+    height: 20rem;
+    text-align: center;
+}

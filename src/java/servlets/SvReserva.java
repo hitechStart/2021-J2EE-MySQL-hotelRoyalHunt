@@ -1,6 +1,7 @@
 package servlets;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import logica.ControladoraFactura;
+import logica.ControladoraHabitacion;
 import logica.ControladoraHuesped;
 import logica.ControladoraPersona;
 import logica.ControladoraReserva;
@@ -46,7 +48,7 @@ public class SvReserva extends HttpServlet {
         String tematica = request.getParameter("tematica");
         String tipo = request.getParameter("tipo");
         String numPersonas = String.valueOf(request.getParameter("numPersonas"));
-        String montoTotal = String.valueOf(request.getParameter("montoTotal"));
+        //String montoTotal = String.valueOf(request.getParameter("montoTotal"));
 
         String idFactura = idReserva;
 
@@ -64,7 +66,7 @@ public class SvReserva extends HttpServlet {
         descripcion.add(tematica);
         descripcion.add(tipo);
         descripcion.add(numPersonas);
-        descripcion.add(montoTotal);
+        //descripcion.add(montoTotal);
 
         request.getSession().setAttribute("idReserva", idReserva);
         request.getSession().setAttribute("dni", dni);
@@ -80,27 +82,40 @@ public class SvReserva extends HttpServlet {
         request.getSession().setAttribute("tematica", tematica);
         request.getSession().setAttribute("tipo", tipo);
         request.getSession().setAttribute("numPersonas", numPersonas);
-        request.getSession().setAttribute("montoTotal", montoTotal);
+        //request.getSession().setAttribute("montoTotal", montoTotal);
 
         HttpSession session = request.getSession();
         String user = (String) session.getAttribute("usuario");
 
         ControladoraPersona ctrl_persona = new ControladoraPersona();
         ControladoraHuesped ctrl_huesped = new ControladoraHuesped();
-        ControladoraFactura ctrl_factura = new ControladoraFactura();
+        ControladoraHabitacion ctrl_Habitacion = new ControladoraHabitacion();
+        //ControladoraFactura ctrl_factura = new ControladoraFactura();
 
         ControladoraReserva ctrl_reserva = new ControladoraReserva();
-        try {
+         boolean autorizado = ctrl_reserva.verificacionFecha(check_in, check_out,idHabitacion);
+     
+        try{
+            double montoTotal=ctrl_Habitacion.calculaMontoTotal(idHabitacion,
+                    piso,tematica,tipo,numPersonas,check_in,check_out);
+  
+            if(autorizado){
+    
             ctrl_persona.crearPersona(dni, nombre, apellido, fechaNac, direccion);
             ctrl_huesped.crearHuesped(dni, nombre, apellido, fechaNac, direccion, profesion);
             ctrl_reserva.crearReserva(idReserva, dni, nombre, apellido, fechaNac, direccion, profesion,
                     check_in, check_out, idHabitacion, piso, tematica, tipo, numPersonas,user);
-            //ctrl_factura.crearFactura(dni, descripcion, montoTotal);
-
+           //ctrl_factura.crearFactura(idReserva, descripcion, montoTotal);
+            response.sendRedirect("principal.jsp");
+            
+            }else
+            {
+                 response.sendRedirect("formulario.jsp");
+            }
         } catch (Exception ex) {
             Logger.getLogger(SvReserva.class.getName()).log(Level.SEVERE, null, ex);
         }
-        response.sendRedirect("imprimirEmpleado.jsp");
+        
     }
 
     @Override

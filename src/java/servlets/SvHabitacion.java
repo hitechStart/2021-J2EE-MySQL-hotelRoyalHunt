@@ -34,9 +34,9 @@ public class SvHabitacion extends HttpServlet {
         String piso = String.valueOf(request.getParameter("piso"));
         String tematica = request.getParameter("tematica");
         String tipo = request.getParameter("tipo");
-        String disponibilidad = String.valueOf(request.getParameter("disponibilidad"));
         String precio = String.valueOf(request.getParameter("precio"));
-        
+        String disponibilidad = String.valueOf(request.getParameter("disponibilidad"));
+
         request.getSession().setAttribute("idHabitacion", idHabitacion);
         request.getSession().setAttribute("piso", piso);
         request.getSession().setAttribute("tematica", tematica);
@@ -44,12 +44,12 @@ public class SvHabitacion extends HttpServlet {
         request.getSession().setAttribute("disponibilidad", disponibilidad);
         request.getSession().setAttribute("precio", precio);
 
-          ControladoraHabitacion ctrl_habitacion = new ControladoraHabitacion();
-          
+        ControladoraHabitacion ctrl_habitacion = new ControladoraHabitacion();
+
         try {
             ctrl_habitacion.crearHabitacion(idHabitacion, piso, tematica, tipo, disponibilidad, precio);
-             response.sendRedirect("PanelControl.jsp");
-            
+            response.sendRedirect("PanelControl.jsp");
+
         } catch (Exception ex) {
             Logger.getLogger(SvHabitacion.class.getName()).log(Level.SEVERE, null, ex);
         }

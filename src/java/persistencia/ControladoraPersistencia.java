@@ -60,4 +60,8 @@ public class ControladoraPersistencia {
 
         return reservaJPA.findReservaEntities();
     }
+     public List<Habitacion> traerHabitaciones() {
+
+        return habitacionJPA.findHabitacionEntities();
+    }
 }

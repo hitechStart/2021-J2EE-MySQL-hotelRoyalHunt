@@ -11,6 +11,39 @@ public class ControladoraReserva {
 
     ControladoraPersistencia control = new ControladoraPersistencia();
 
+    public boolean verificacionFecha(String fechaDesde, String fechaHasta, String identificacionRoom) {
+
+        boolean autorizado = false;
+        List<Reserva> reserva = control.traerReserva();
+        String fecha_in;
+        String fecha_out;
+        int idHabitacion,numero;
+        
+        numero=Integer.parseInt(identificacionRoom);
+        
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+        if (reserva != null) {
+            for (Reserva reservaFechas : reserva) {
+
+                fecha_in = formatter.format(reservaFechas.getCheck_in());
+                fecha_out = formatter.format(reservaFechas.getCheck_out());
+                idHabitacion = reservaFechas.getHabitacion().getIdHabitacion();
+
+                                if( numero == idHabitacion && 
+                       (( 0 < fecha_in.compareTo(fechaDesde) && 0 < fecha_in.compareTo(fechaHasta))
+                || ( fecha_out.compareTo(fechaDesde) < 0 && fecha_out.compareTo(fechaHasta) < 0)) ) {
+                   autorizado= true;
+                   return true;
+                } else {
+                  autorizado=false;
+                }
+            }
+        }
+
+        return autorizado;
+    }
+
     public void crearReserva(String idReserva, String dni, String nombre, String apellido,
             String fechaNac, String direccion, String profesion,
             String check_in, String check_out, String idHabitacion, String piso,
@@ -29,6 +62,7 @@ public class ControladoraReserva {
         huesped.setNombre(nombre);
         huesped.setApellido(apellido);
 
+        /*Convertir de String a Date*/
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date date;
         date = formatter.parse(fechaNac);
@@ -127,12 +161,12 @@ public class ControladoraReserva {
 
                 fecha_in = formatter.format(reservaFechas.getCheck_in());
                 fecha_out = formatter.format(reservaFechas.getCheck_out());
-               
-                System.out.println("Desde :"+fecha_in.compareTo(fechaDesde)
-                        +" Hasta :"+fecha_out.compareTo(fechaHasta));
+
+                System.out.println("Desde :" + fecha_in.compareTo(fechaDesde)
+                        + " Hasta :" + fecha_out.compareTo(fechaHasta));
                 //   || (fecha_in.compareTo(fecha) < 0 && 1 <= fecha_out.compareTo(fecha))
                 if (huesped == reservaFechas.getHuesped().getDni()
-                        && fecha_in.compareTo(fechaDesde) <=0 && fecha_out.compareTo(fechaHasta)<=0) {
+                        && fecha_in.compareTo(fechaDesde) <= 0 && fecha_out.compareTo(fechaHasta) <= 0) {
 
                     listaCompleta.add(reservaFechas);
                 }
