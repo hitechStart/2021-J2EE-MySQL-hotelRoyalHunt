@@ -1,8 +1,6 @@
 package servlets;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -11,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import logica.ControladoraFactura;
 import logica.ControladoraHabitacion;
 import logica.ControladoraHuesped;
 import logica.ControladoraPersona;
@@ -48,26 +45,7 @@ public class SvReserva extends HttpServlet {
         String tematica = request.getParameter("tematica");
         String tipo = request.getParameter("tipo");
         String numPersonas = String.valueOf(request.getParameter("numPersonas"));
-        //String montoTotal = String.valueOf(request.getParameter("montoTotal"));
-
-        String idFactura = idReserva;
-
-        ArrayList<String> descripcion = new ArrayList<>();
-
-        descripcion.add(dni);
-        descripcion.add(nombre);
-        descripcion.add(apellido);
-        descripcion.add(direccion);
-        descripcion.add(profesion);
-        descripcion.add(check_in);
-        descripcion.add(check_out);
-        descripcion.add(idHabitacion);
-        descripcion.add(piso);
-        descripcion.add(tematica);
-        descripcion.add(tipo);
-        descripcion.add(numPersonas);
-        //descripcion.add(montoTotal);
-
+       
         request.getSession().setAttribute("idReserva", idReserva);
         request.getSession().setAttribute("dni", dni);
         request.getSession().setAttribute("nombre", nombre);
@@ -82,40 +60,37 @@ public class SvReserva extends HttpServlet {
         request.getSession().setAttribute("tematica", tematica);
         request.getSession().setAttribute("tipo", tipo);
         request.getSession().setAttribute("numPersonas", numPersonas);
-        //request.getSession().setAttribute("montoTotal", montoTotal);
-
+       
         HttpSession session = request.getSession();
         String user = (String) session.getAttribute("usuario");
 
         ControladoraPersona ctrl_persona = new ControladoraPersona();
         ControladoraHuesped ctrl_huesped = new ControladoraHuesped();
         ControladoraHabitacion ctrl_Habitacion = new ControladoraHabitacion();
-        //ControladoraFactura ctrl_factura = new ControladoraFactura();
 
         ControladoraReserva ctrl_reserva = new ControladoraReserva();
-         boolean autorizado = ctrl_reserva.verificacionFecha(check_in, check_out,idHabitacion);
-     
-        try{
-            double montoTotal=ctrl_Habitacion.calculaMontoTotal(idHabitacion,
-                    piso,tematica,tipo,numPersonas,check_in,check_out);
-  
-            if(autorizado){
-    
-            ctrl_persona.crearPersona(dni, nombre, apellido, fechaNac, direccion);
-            ctrl_huesped.crearHuesped(dni, nombre, apellido, fechaNac, direccion, profesion);
-            ctrl_reserva.crearReserva(idReserva, dni, nombre, apellido, fechaNac, direccion, profesion,
-                    check_in, check_out, idHabitacion, piso, tematica, tipo, numPersonas,user);
-           //ctrl_factura.crearFactura(idReserva, descripcion, montoTotal);
-            response.sendRedirect("principal.jsp");
-            
-            }else
-            {
-                 response.sendRedirect("formulario.jsp");
+        boolean autorizado = ctrl_reserva.verificacionFecha(check_in, check_out, idHabitacion);
+
+        try {
+            double montoTotal = ctrl_Habitacion.calculaMontoTotal(idHabitacion,
+                    piso, tematica, tipo, numPersonas, check_in, check_out);
+
+            System.out.println("valores son: "+autorizado +montoTotal);
+            if (autorizado && montoTotal!=0) {
+
+                ctrl_persona.crearPersona(dni, nombre, apellido, fechaNac, direccion);
+                ctrl_huesped.crearHuesped(dni, nombre, apellido, fechaNac, direccion, profesion);
+                ctrl_reserva.crearReserva(idReserva, dni, nombre, apellido, fechaNac, direccion, profesion,
+                        check_in, check_out, idHabitacion, piso, tematica, tipo, numPersonas, user,montoTotal);
+
+                response.sendRedirect("principal.jsp");
+
+            } else {
+                response.sendRedirect("formulario.jsp");
             }
         } catch (Exception ex) {
             Logger.getLogger(SvReserva.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }
 
     @Override

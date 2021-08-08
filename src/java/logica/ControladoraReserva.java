@@ -17,28 +17,34 @@ public class ControladoraReserva {
         List<Reserva> reserva = control.traerReserva();
         String fecha_in;
         String fecha_out;
-        int idHabitacion,numero;
-        
-        numero=Integer.parseInt(identificacionRoom);
-        
+        int idHabitacion, numero;
+
+        numero = Integer.parseInt(identificacionRoom);
+
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
-        if (reserva != null) {
+        System.out.println("valor es: "+reserva.toString().compareTo("[]"));
+        /* En caso que la BBDD este vacia, trae "[]" por ser la primera vez*/
+        if (reserva != null && reserva.toString().compareTo("[]") != 0) {
+
             for (Reserva reservaFechas : reserva) {
 
                 fecha_in = formatter.format(reservaFechas.getCheck_in());
                 fecha_out = formatter.format(reservaFechas.getCheck_out());
                 idHabitacion = reservaFechas.getHabitacion().getIdHabitacion();
 
-                                if( numero == idHabitacion && 
-                       (( 0 < fecha_in.compareTo(fechaDesde) && 0 < fecha_in.compareTo(fechaHasta))
-                || ( fecha_out.compareTo(fechaDesde) < 0 && fecha_out.compareTo(fechaHasta) < 0)) ) {
-                   autorizado= true;
-                   return true;
+                if (numero == idHabitacion
+                        && ((0 < fecha_in.compareTo(fechaDesde) && 0 < fecha_in.compareTo(fechaHasta))
+                        || (fecha_out.compareTo(fechaDesde) < 0 && fecha_out.compareTo(fechaHasta) < 0))) {
+                    autorizado = true;
+                    return true;
                 } else {
-                  autorizado=false;
+
+                    autorizado = false;
                 }
             }
+        } else {
+            autorizado = true;
         }
 
         return autorizado;
@@ -47,7 +53,7 @@ public class ControladoraReserva {
     public void crearReserva(String idReserva, String dni, String nombre, String apellido,
             String fechaNac, String direccion, String profesion,
             String check_in, String check_out, String idHabitacion, String piso,
-            String tematica, String tipo, String numPersonas, String user)
+            String tematica, String tipo, String numPersonas, String user, double montoTotal)
             throws ParseException, Exception {
 
         Reserva reserva = new Reserva();
@@ -93,6 +99,8 @@ public class ControladoraReserva {
 
         reserva.setHabitacion(habitacion);
         reserva.setUsuario(user);
+
+        reserva.setMontoTotal(montoTotal);
 
         control.crearReserva(reserva);
     }

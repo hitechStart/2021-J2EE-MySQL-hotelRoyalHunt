@@ -159,20 +159,13 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="form-group">
                                             <span class="form-label">NUMERO DE PERSONAS</span>
                                             <input class="form-control" type="number" name="numPersonas" required/>
                                         </div>
                                     </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <span class="form-label">MONTO TOTAL</span>
-                                            <input class="form-control" type="number"  step="any" name="montoTotal" required>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div> 
                                 <div class="row">
                                     <div class="col-md-12">
                                         <button type="submit" class="submit-btn">RESERVAR</button>

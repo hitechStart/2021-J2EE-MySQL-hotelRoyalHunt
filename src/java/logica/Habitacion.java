@@ -19,18 +19,16 @@ public class Habitacion implements Serializable{
     private int piso;
     private String tematica;
     private String tipo;
-    private int disponibilidad;
     private double precioNoche;
 
     public Habitacion() {
     }
 
-    public Habitacion(int idHabitacion, int piso, String tematica, String tipo, int disponibilidad, double precioNoche) {
+    public Habitacion(int idHabitacion, int piso, String tematica, String tipo, double precioNoche) {
         this.idHabitacion = idHabitacion;
         this.piso = piso;
         this.tematica = tematica;
         this.tipo = tipo;
-        this.disponibilidad = disponibilidad;
         this.precioNoche = precioNoche;
     }
 
@@ -65,15 +63,6 @@ public class Habitacion implements Serializable{
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
-    public int getDisponibilidad() {
-        return disponibilidad;
-    }
-
-    public void setDisponibilidad(int disponibilidad) {
-        this.disponibilidad = disponibilidad;
-    }
-
     public double getPrecioNoche() {
         return precioNoche;
     }
@@ -84,7 +73,7 @@ public class Habitacion implements Serializable{
 
     @Override
     public String toString() {
-        return "Habitacion{" + "idHabitacion=" + idHabitacion + ", piso=" + piso + ", tematica=" + tematica + ", tipo=" + tipo + ", disponibilidad=" + disponibilidad + ", precioNoche=" + precioNoche + '}';
+        return "Habitacion{" + "idHabitacion=" + idHabitacion + ", piso=" + piso + ", tematica=" + tematica + ", tipo=" + tipo + ", precioNoche=" + precioNoche + '}';
     }
 
    

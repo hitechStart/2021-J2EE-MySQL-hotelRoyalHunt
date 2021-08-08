@@ -20,7 +20,6 @@ public class ControladoraHabitacion {
         habitacion.setPiso(Integer.parseInt(piso));
         habitacion.setTipo(tipo);
         habitacion.setTematica(tematica);
-        habitacion.setDisponibilidad(Integer.parseInt(disponibilidad));
         habitacion.setPrecioNoche(Double.valueOf(precioNoche));
 
         control.crearHabitacion(habitacion);
@@ -53,16 +52,39 @@ public class ControladoraHabitacion {
 
         reserva.setCantDias(dias);
 
+        /*Calcula el monto total*/
         for (Habitacion room : habitaciones) {
 
-            if (numero == room.getIdHabitacion() && floor == room.getPiso()
-                    && tematica.compareTo(room.getTematica()) == 0
-                    && tipo.compareTo(room.getTipo()) == 0) {
+            /*Si cumple los requisitos calcula el monto total*/
+            if (numero == room.getIdHabitacion()) {
 
-                return (reserva.getCantDias() * numberPerson * room.getPrecioNoche());
+                switch (tipo) {
+                    case "SINGLE":
+                        if (numberPerson == 1) {
+                            return (reserva.getCantDias() * numberPerson * room.getPrecioNoche());
+                        }
+                        break;
+
+                    case "DOBLE":
+                        if (numberPerson <= 2) {
+                            return (reserva.getCantDias() * numberPerson * room.getPrecioNoche());
+                        }
+                        break;
+                    case "TRIPLE":
+                        if (numberPerson <= 3) {
+                            return (reserva.getCantDias() * numberPerson * room.getPrecioNoche());
+                        }
+                        break;
+                    case "MULTIPLE":
+                        return (reserva.getCantDias() * numberPerson * room.getPrecioNoche());
+
+                    default:
+                        return 0;
+
+                }
             }
         }
-        return 100;
+        return 0;
     }
 
 }

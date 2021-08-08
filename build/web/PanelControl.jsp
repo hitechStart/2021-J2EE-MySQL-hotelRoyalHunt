@@ -266,15 +266,6 @@
                                 <div class="espacio"></div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group">
-                                            <div class="form-label"></div>
-                                            <input class="form-control" type="number" placeholder="DISPONIBILIDAD" name="disponibilidad" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="espacio"></div>
-                                <div class="row">
-                                    <div class="col-md-12">
                                         <button id="btn" type="submit" class="submit-btn">REGISTRAR</button>
                                     </div>
                                 </div>
@@ -346,15 +337,6 @@
                                         <div class="form-group">
                                             <div class="form-label"></div>
                                             <input class="form-control" type="number" placeholder="PRECIO POR NOCHE" name="precio" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="espacio"></div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <div class="form-label"></div>
-                                            <input class="form-control" type="number" placeholder="DISPONIBILIDAD" name="disponibilidad" required>
                                         </div>
                                     </div>
                                 </div>
@@ -438,15 +420,6 @@
                                 <div class="espacio"></div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group">
-                                            <div class="form-label"></div>
-                                            <input class="form-control" type="number" placeholder="DISPONIBILIDAD" name="disponibilidad" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="espacio"></div>
-                                <div class="row">
-                                    <div class="col-md-12">
                                         <button id="boton" type="submit" class="submit-btn">REGISTRAR</button>
                                     </div>
                                 </div>
@@ -517,15 +490,6 @@
                                         <div class="form-group">
                                             <div class="form-label"></div>
                                             <input class="form-control" type="number" placeholder="PRECIO POR NOCHE" name="precio" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="espacio"></div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <div class="form-label"></div>
-                                            <input class="form-control" type="number" placeholder="DISPONIBILIDAD" name="disponibilidad" required>
                                         </div>
                                     </div>
                                 </div>

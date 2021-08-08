@@ -4,7 +4,6 @@ import java.util.List;
 import logica.Empleado;
 import logica.Persona;
 import logica.Huesped;
-import logica.Factura;
 import logica.Habitacion;
 import logica.Reserva;
 //import logica.Hotel;
@@ -14,7 +13,6 @@ public class ControladoraPersistencia {
     EmpleadoJpaController empleadoJPA = new EmpleadoJpaController();
     PersonaJpaController personaJPA = new PersonaJpaController();
     HuespedJpaController huespedJPA = new HuespedJpaController();
-    FacturaJpaController facturaJPA = new FacturaJpaController();
     HabitacionJpaController habitacionJPA = new HabitacionJpaController();
     ReservaJpaController reservaJPA = new ReservaJpaController();
 
@@ -28,10 +26,6 @@ public class ControladoraPersistencia {
 
     public void crearHuesped(Huesped huesped) throws Exception {
         huespedJPA.create(huesped);
-    }
-
-    public void crearFactura(Factura factura) throws Exception {
-        facturaJPA.create(factura);
     }
 
     public void crearHabitacion(Habitacion habitacion) throws Exception {
