@@ -77,6 +77,12 @@
     bottom: 10px;
     left:5px;
 }
+#boton:hover {
+    color: #001F3F;
+    background-color: #fff;
+    transition: 1s ease-in-out;
+    
+}
 #btn{
     width: 90%;
     height: 40px;
@@ -90,6 +96,12 @@
     position: absolute;
     bottom: 5px;
     left:5px;
+}
+#btn:hover {
+    color: #001F3F;
+    background-color: #fff;
+    transition: 1s ease-in-out;
+    
 }
 .contenedor, h2{
     display: block;

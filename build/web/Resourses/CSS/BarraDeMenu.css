@@ -69,6 +69,15 @@
     color: #0089E0;
 }
 
+#cerrarSesion{
+    display:inline;
+    border: none;border: 0;
+    outline: none;
+    background: inherit;
+    background-color:transparent;
+    color:white;
+    font-size: 1.2rem;
+}
 /*Mobile menu*/
 .menu-mobile{
     display: none;

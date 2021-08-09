@@ -31,7 +31,7 @@
                                             <input id="pass" type="password" name="password" class="input" data-type="password">
                                         </div>
                                         <div class="group">
-                                            <input type="submit" class="button" value="INICIAR">
+                                            <input type="submit" id="btn" class="button" value="INICIAR">
                                         </div>
                                         <div class="hr"></div>
 
@@ -104,7 +104,7 @@
 
                                         <div class="row">    
                                             <div class="group">
-                                                <input type="submit" class="button" value="REGISTRAR">
+                                                <input type="submit" id="btn" class="button" value="REGISTRAR">
                                             </div>
                                         </div>
                                     </div>
@@ -114,11 +114,11 @@
 
                     </div>
                 </div>
-                <div class="widgets col-1 order-last">
-
+                <div class="widgets col-2 order-last">
+                <!--Reloj-->
                     <div class="cleanslate w24tz-current-time w24tz-small" style="margin-left: 10px !important; display: inline-block !important; visibility: hidden !important; min-width:80px !important; min-height:100px !important; border-radius: 20px !important;"><p><a href="//24timezones.com/zona-horaria/art" style="text-decoration: none" class="clock24" id="tz24-1626701529-tzart-eyJob3VydHlwZSI6IjI0Iiwic2hvd2RhdGUiOiIxIiwic2hvd3NlY29uZHMiOiIxIiwiY29udGFpbmVyX2lkIjoiY2xvY2tfYmxvY2tfY2I2MGY1N2VkOWI4ZTliIiwidHlwZSI6ImRiIiwibGFuZyI6ImVzIn0" title="ART reloj mundial" target="_blank">ARGENTINA</a></p><div id="clock_block_cb60f57ed9b8e9b"></div></div>
                     <br>
-                  
+                  <!--Clima-->
                     <div align="center">
                         <!-- weather widget start -->
                         <a target="_blank" href="https://hotelmix.es/weather/buenos-aires-18250"><img src="https://w.bookcdn.com/weather/picture/1_18250_1_4_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=582&anc_id=85008"  alt="booked.net"/></a>

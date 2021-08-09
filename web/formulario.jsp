@@ -13,7 +13,7 @@
         <%@include file = "BarraRedSocial.jsp"%>
     </head>
     <body>
-        <%@include file = "BarraDeMenu.jsp"%>
+        <%@include file = "BarraMenuExterna.jsp"%>
 
         <!-- Slider -->
         <section class="contenedor-slider">
@@ -47,23 +47,20 @@
                     <div class="row">
                         <div class="booking-form">
                             <div class="booking-bg">
-                                <div class="form-header">
-                                    <h2>Make your reservation</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam numquam at</p>
-                                </div>
+                               
                             </div>
                             <form action="SvReserva" method="POST">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <div class="form-label">NUMERO DE RESERVA</div>
-                                            <input class="form-control" type="number" name="idReserva" required>
+                                            <input class="form-control" id="box" type="number" name="idReserva" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <div class="form-label">DOCUMENTO</div>
-                                            <input class="form-control" type="number" name="dni" required>
+                                            <input class="form-control"id="box" type="number" name="dni" required>
                                         </div>
                                     </div>
                                 </div>
@@ -71,13 +68,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <div class="form-label">NOMBRE</div>
-                                            <input class="form-control" type="text" name="nombre" required>
+                                            <input class="form-control" id="box" type="text" name="nombre" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <div class="form-label">APELLIDO</div>
-                                            <input class="form-control" type="text" name="apellido" required>
+                                            <input class="form-control" id="box" type="text" name="apellido" required>
                                         </div>
                                     </div>
                                 </div>
@@ -85,19 +82,19 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <span class="form-label">NACIMIENTO</span>
-                                            <input class="form-control" type="date" name="fechaNac" required>
+                                            <input class="form-control" id="box" type="date" name="fechaNac" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <span class="form-label">DIRECCION</span>
-                                            <input class="form-control" type="text" name="direccion" required>
+                                            <input class="form-control" id="box" type="text" name="direccion" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <span class="form-label">PROFESION</span>
-                                            <input class="form-control" type="text" name="profesion" required>
+                                            <input class="form-control" id="box" type="text" name="profesion" required>
                                         </div>
                                     </div>
                                 </div>
@@ -105,13 +102,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span class="form-label">CHECK IN</span>
-                                            <input class="form-control" type="date" name="check_in" required>
+                                            <input class="form-control" id="box" type="date" name="check_in" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span class="form-label">CHECK OUT</span>
-                                            <input class="form-control" type="date" name="check_out" required>
+                                            <input class="form-control" id="box" type="date" name="check_out" required>
                                         </div>
                                     </div>
                                 </div>
@@ -119,13 +116,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span class="form-label">ID DE HABITACION</span>
-                                            <input class="form-control" type="number" name="idHabitacion" required>
+                                            <input class="form-control" id="box" type="number" name="idHabitacion" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span class="form-label">PISO</span>
-                                            <input class="form-control" type="number" name="piso" required>
+                                            <input class="form-control" id="box" type="number" name="piso" required>
                                         </div>
                                     </div>
                                 </div>
@@ -134,7 +131,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span class="form-label">TEMATICA</span>
-                                            <select class="form-control"  name="tematica" required>
+                                            <select class="form-control"  id="box" name="tematica" required>
                                                 <option value="" selected hidden>Select room type</option>
                                                 <option>CLASICA</option>
                                                 <option>CONTEMPORANEA</option>
@@ -147,7 +144,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span class="form-label">TIPO DE HABITACION</span>
-                                            <select class="form-control"  name="tipo" required>
+                                            <select class="form-control" id="box"  name="tipo" required>
                                                 <option value="" selected hidden>Select room type</option>
                                                 <option>SINGLE</option>
                                                 <option>DOBLE</option>
@@ -162,13 +159,13 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <span class="form-label">NUMERO DE PERSONAS</span>
-                                            <input class="form-control" type="number" name="numPersonas" required/>
+                                            <input class="form-control" id="box" type="number" name="numPersonas" required/>
                                         </div>
                                     </div>
                                 </div> 
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <button type="submit" class="submit-btn">RESERVAR</button>
+                                        <button id="boton" type="submit" class="submit-btn">RESERVAR</button>
                                     </div>
                                 </div>
                             </form>

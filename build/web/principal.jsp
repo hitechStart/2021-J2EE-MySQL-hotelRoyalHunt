@@ -16,6 +16,16 @@
     </head>
     <body>
 
+        <!--Validamos la sesion-->
+        <%
+        HttpSession misession=request.getSession();
+         String usu=(String) misession.getAttribute("usuario");
+         System.out.println("Usuario de re ingreso: "+usu);
+         if(usu==null){
+         response.sendRedirect("index.jsp");
+         }else{
+        %>
+        
         <!-- Boton "Volver Arriba" -->
         <div class="btn-volver-arriba" id="btnVolverArriba">
             <a href="#" class="volver-arriba">
@@ -200,10 +210,10 @@
                             <div class="formulario" id="formulario">
                                 <h2>Suscribete y recibe nuestras novedades</h2>
                                 <p>Recibe descuentos, promociones, nuevas actividades y espectaculos, mantente actualizado y disfruta de la vida!</p>
-                                <form>
+                                <form action="SvSuscripcion" method="POST">
                                     <div>
-                                        <input type="text" name="nombre" placeholder="Nombre" id="nombre">
-                                        <p class="error">Por favor escribe tu nombre</p>
+                                        <input type="text" name="idDni" placeholder="DNI" id="nombre">
+                                        <p class="error">Por favor escribe tu dni</p>
                                     </div>
                                     <div>
                                         <input type="email" name="email" placeholder="Correo electrónico" id="email">
@@ -239,10 +249,10 @@
             <script src="Resourses/JS/validacion.js"></script>
             <script src="Resourses/JS/menuMobile.js"></script>
 
-
             <script src="Resourses/JS/parallax.min.js"></script>
-
             <script src="Resourses/JS/prefixfree.min.js"></script>
+                    
+            <%}%>
     </body>
 </html>
 

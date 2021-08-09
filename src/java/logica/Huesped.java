@@ -3,7 +3,10 @@ package logica;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,13 +15,19 @@ public class Huesped extends Persona implements Serializable {
 
     @Basic
     private String profesion;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idDni")
+    Suscripcion suscripcion;
 
     public Huesped() {
         super();
     }
 
-    public Huesped(int idHuesped, int dni, String nombre, String apellido, Date fechaNac, String direccion, String profesion) {
-        
+    public Huesped(String profesion) {
+        this.profesion = profesion;
+    }
+
+    public Huesped(String profesion, int dni, String nombre, String apellido, Date fechaNac, String direccion) {
         super(dni, nombre, apellido, fechaNac, direccion);
         this.profesion = profesion;
     }
@@ -36,4 +45,5 @@ public class Huesped extends Persona implements Serializable {
         return "Huesped{" + "profesion=" + profesion + '}';
     }
 
+   
 }

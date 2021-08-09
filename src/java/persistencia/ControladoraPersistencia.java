@@ -6,7 +6,7 @@ import logica.Persona;
 import logica.Huesped;
 import logica.Habitacion;
 import logica.Reserva;
-//import logica.Hotel;
+import logica.Suscripcion;
 
 public class ControladoraPersistencia {
 
@@ -15,6 +15,7 @@ public class ControladoraPersistencia {
     HuespedJpaController huespedJPA = new HuespedJpaController();
     HabitacionJpaController habitacionJPA = new HabitacionJpaController();
     ReservaJpaController reservaJPA = new ReservaJpaController();
+    SuscripcionJpaController suscripcionJPA = new SuscripcionJpaController();
 
     public void crearPersona(Persona persona) throws Exception {
         personaJPA.create(persona);
@@ -34,6 +35,9 @@ public class ControladoraPersistencia {
 
     public void crearReserva(Reserva reserva) throws Exception {
         reservaJPA.create(reserva);
+    }
+    public void crearSuscripcion(Suscripcion suscripcion) throws Exception {
+        suscripcionJPA.create(suscripcion);
     }
 
     public List<Empleado> traerEmpleado() {

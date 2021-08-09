@@ -1,22 +1,21 @@
 package servlets;
 
 import java.io.IOException;
-
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import logica.ControladoraUsuario;
 
-@WebServlet(name = "SvUsuario", urlPatterns = {"/SvUsuario"})
-public class SvUsuario extends HttpServlet {
+@WebServlet(name = "SvCerrarSesion", urlPatterns = {"/SvCerrarSesion"})
+public class SvCerrarSesion extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+
     }
 
     @Override
@@ -28,25 +27,11 @@ public class SvUsuario extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        String usuario = request.getParameter("usuario");
-        String password = request.getParameter("password");
-
-        ControladoraUsuario control = new ControladoraUsuario();
-        boolean autorizado = control.verificarEmpleado(usuario, password);
-
-        if (autorizado) {
-/*--De esta manera seteamos el usuario para que este disponible durante toda la sesion--*/
-            HttpSession misession = request.getSession(true);
-           
-            misession.setAttribute("usuario", usuario);
-            misession.setAttribute("password", password);
-
-            response.sendRedirect("principal.jsp");
-        } else {
-            response.sendRedirect("index.jsp");
-        }
-
+  
+        /*Destruimos el objeto misession para estar seguros*/
+        HttpSession misession = request.getSession(false);
+        misession.invalidate();
+        response.sendRedirect("index.jsp");
     }
 
     @Override

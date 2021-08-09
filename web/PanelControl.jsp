@@ -26,7 +26,7 @@
 <body>
     <!--Inicio de barra de menu-->
     <header>
-        <%@ include file = "BarraDeMenu.jsp" %>
+        <%@ include file = "BarraMenuExterna.jsp" %>
         <div class="btn-volver-arriba" id="btnVolverArriba">
             <a href="#" class="volver-arriba">
                 <i class="fa fa-arrow-up" aria-hidden="true"></i>

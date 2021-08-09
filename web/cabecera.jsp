@@ -18,6 +18,11 @@
 <meta name="revisit-after" content="1 month" />
 <meta name="robots" content="index" />
 
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Last-Modified" content="0">
+<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+<meta http-equiv="Pragma" content="no-cache">
+
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 
@@ -32,5 +37,9 @@
 <link rel="stylesheet" href="Resourses/CSS/redesSociales.css">
 <link rel="stylesheet" type="text/css" href="Resourses/CSS/footer.css">
 <link rel="stylesheet" type="text/css" href="Resourses/CSS/BarraDeMenu.css">
- <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
- <title>Hotel Royal Hunt</title>
+<script type="text/javascript" language="javascript" src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+
+<title>Hotel Royal Hunt</title>
+
+
