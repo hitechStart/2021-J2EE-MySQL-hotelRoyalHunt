@@ -1,0 +1,10 @@
+Todo operacion exitosa vuelve a la pagina pricipal.
+Si la operacion de carga del formulario, panel de control y la de inicio (index.jsp) no es satisfactoria, vuelve a cargar la misma pagina.
+Se usaron plantillas de bootstrap y widgets echos en javascript.
+se Uso la ultima version de Bootstrap (5.02)
+
+Se considero la comparacion de fechas,comparacion de id de habitaciones, calculos para obtener el monto total,usuario que se encuentra en el sistema y eliminacion de reservas.
+
+Tecnologias usadas:HTML, CSS, JAVASCRIPT,BOOTSTRAP, NORMALIZE ,MODERNIZED , JAVA, MYSQL, JSP, JPA, ORM.
+
+Se considero reutilizacion de codigo para la cabecera, barra de menu y pie de pagina.
