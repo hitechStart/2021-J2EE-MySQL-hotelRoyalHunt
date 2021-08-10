@@ -45,7 +45,7 @@ public class SvReserva extends HttpServlet {
         String tematica = request.getParameter("tematica");
         String tipo = request.getParameter("tipo");
         String numPersonas = String.valueOf(request.getParameter("numPersonas"));
-       
+
         request.getSession().setAttribute("idReserva", idReserva);
         request.getSession().setAttribute("dni", dni);
         request.getSession().setAttribute("nombre", nombre);
@@ -60,7 +60,7 @@ public class SvReserva extends HttpServlet {
         request.getSession().setAttribute("tematica", tematica);
         request.getSession().setAttribute("tipo", tipo);
         request.getSession().setAttribute("numPersonas", numPersonas);
-       
+
         HttpSession session = request.getSession();
         String user = (String) session.getAttribute("usuario");
 
@@ -74,14 +74,13 @@ public class SvReserva extends HttpServlet {
         try {
             double montoTotal = ctrl_Habitacion.calculaMontoTotal(idHabitacion,
                     piso, tematica, tipo, numPersonas, check_in, check_out);
-
-            System.out.println("valores son: "+autorizado +montoTotal);
-            if (autorizado && montoTotal!=0) {
+                        
+            if (autorizado && montoTotal != 0) {
 
                 ctrl_persona.crearPersona(dni, nombre, apellido, fechaNac, direccion);
                 ctrl_huesped.crearHuesped(dni, nombre, apellido, fechaNac, direccion, profesion);
                 ctrl_reserva.crearReserva(idReserva, dni, nombre, apellido, fechaNac, direccion, profesion,
-                        check_in, check_out, idHabitacion, piso, tematica, tipo, numPersonas, user,montoTotal);
+                        check_in, check_out, idHabitacion, piso, tematica, tipo, numPersonas, user, montoTotal);
 
                 response.sendRedirect("principal.jsp");
 

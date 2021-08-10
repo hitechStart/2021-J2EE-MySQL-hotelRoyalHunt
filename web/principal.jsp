@@ -18,14 +18,13 @@
 
         <!--Validamos la sesion-->
         <%
-        HttpSession misession=request.getSession();
-         String usu=(String) misession.getAttribute("usuario");
-         System.out.println("Usuario de re ingreso: "+usu);
-         if(usu==null){
-         response.sendRedirect("index.jsp");
-         }else{
+            HttpSession misession = request.getSession();
+            String usu = (String) misession.getAttribute("usuario");
+            if (usu == null) {
+                response.sendRedirect("index.jsp");
+            } else {
         %>
-        
+
         <!-- Boton "Volver Arriba" -->
         <div class="btn-volver-arriba" id="btnVolverArriba">
             <a href="#" class="volver-arriba">
@@ -236,23 +235,23 @@
                 </div>
             </section>
         </section>
-            <!--Incluimos el archivo de Pie de pagina-->
-            <%@ include file = "footer.jsp" %>
+        <!--Incluimos el archivo de Pie de pagina-->
+        <%@ include file = "footer.jsp" %>
 
-            <script src="Resourses/JS/jquery.min.js"></script>
-            <script src="Resourses/JS/banner.js"></script>
-            <script src="Resourses/JS/stickyHeader.js"></script>
-            <script src="Resourses/JS/scrollSuave.js"></script>
-            <script src="Resourses/JS/modal.js"></script>
-            <script src="Resourses/JS/slider.js"></script>
-            <script src="js/bgParallax.js"></script>
-            <script src="Resourses/JS/validacion.js"></script>
-            <script src="Resourses/JS/menuMobile.js"></script>
+        <script src="Resourses/JS/jquery.min.js"></script>
+        <script src="Resourses/JS/banner.js"></script>
+        <script src="Resourses/JS/stickyHeader.js"></script>
+        <script src="Resourses/JS/scrollSuave.js"></script>
+        <script src="Resourses/JS/modal.js"></script>
+        <script src="Resourses/JS/slider.js"></script>
+        <script src="js/bgParallax.js"></script>
+        <script src="Resourses/JS/validacion.js"></script>
+        <script src="Resourses/JS/menuMobile.js"></script>
 
-            <script src="Resourses/JS/parallax.min.js"></script>
-            <script src="Resourses/JS/prefixfree.min.js"></script>
-                    
-            <%}%>
+        <script src="Resourses/JS/parallax.min.js"></script>
+        <script src="Resourses/JS/prefixfree.min.js"></script>
+
+        <%}%>
     </body>
 </html>
 

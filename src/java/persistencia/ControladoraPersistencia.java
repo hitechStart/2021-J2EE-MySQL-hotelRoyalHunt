@@ -7,6 +7,7 @@ import logica.Huesped;
 import logica.Habitacion;
 import logica.Reserva;
 import logica.Suscripcion;
+import persistencia.exceptions.NonexistentEntityException;
 
 public class ControladoraPersistencia {
 
@@ -62,4 +63,10 @@ public class ControladoraPersistencia {
 
         return habitacionJPA.findHabitacionEntities();
     }
+     public void buscarReserva(int id) throws NonexistentEntityException{
+     
+        
+         reservaJPA.destroy(id);
+         
+     }
 }

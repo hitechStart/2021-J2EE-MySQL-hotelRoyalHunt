@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import persistencia.ControladoraPersistencia;
+import persistencia.exceptions.NonexistentEntityException;
 
 public class ControladoraReserva {
 
@@ -17,13 +18,12 @@ public class ControladoraReserva {
         List<Reserva> reserva = control.traerReserva();
         String fecha_in;
         String fecha_out;
-        int idHabitacion, numero;
+        int idHabitacion, numero, habitacionReservada = 0;
 
         numero = Integer.parseInt(identificacionRoom);
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
-        System.out.println("valor es: "+reserva.toString().compareTo("[]"));
         /* En caso que la BBDD este vacia, trae "[]" por ser la primera vez*/
         if (reserva != null && reserva.toString().compareTo("[]") != 0) {
 
@@ -32,21 +32,32 @@ public class ControladoraReserva {
                 fecha_in = formatter.format(reservaFechas.getCheck_in());
                 fecha_out = formatter.format(reservaFechas.getCheck_out());
                 idHabitacion = reservaFechas.getHabitacion().getIdHabitacion();
-
+                
+                System.out.println("id : "+numero+" idHabitacion");
+                System.out.println("Antes: "+fecha_in.compareTo(fechaDesde)+" "+fecha_in.compareTo(fechaHasta));
+                System.out.println("Despues: "+fecha_out.compareTo(fechaDesde)+" "+fecha_out.compareTo(fechaHasta));
                 if (numero == idHabitacion
                         && ((0 < fecha_in.compareTo(fechaDesde) && 0 < fecha_in.compareTo(fechaHasta))
                         || (fecha_out.compareTo(fechaDesde) < 0 && fecha_out.compareTo(fechaHasta) < 0))) {
+                   
                     autorizado = true;
+                    habitacionReservada = 1;
                     return true;
                 } else {
-
                     autorizado = false;
                 }
             }
         } else {
             autorizado = true;
         }
+        
+        /*Si es cero quiere decir que nunca encontro la habitacion, por lo tanto esta disponible*/
+        if (habitacionReservada == 0) {
+            autorizado = true;
+        } else {
 
+            autorizado = false;
+        }
         return autorizado;
     }
 
@@ -182,5 +193,16 @@ public class ControladoraReserva {
             return listaCompleta;
         }
         return listaCompleta;
+    }
+
+    public List<Reserva> traerReservas() {
+
+        List<Reserva> reserva = control.traerReserva();
+        return reserva;
+    }
+
+    public void borrarReserva(int id) throws NonexistentEntityException {
+
+        control.buscarReserva(id);
     }
 }

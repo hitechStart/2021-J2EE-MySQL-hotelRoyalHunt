@@ -53,26 +53,37 @@
     <section>
         <div>
             <div class="titulo-seccion">
-                <h2 class="titulo">GESTION DE SERVICIOS</h2>
-            </div>
-            <div class="container-fluid">
-                <div class="row listas">
-                    <div class="col-2 imgLeft"></div>  
-                    <div class="col-8 panel">
-                        <h3 class="titulo">PANEL DE CONTROL PARA LA ADMINISTRACION DE:</h3>
-                        <br>
-                        <ul class="listaOpciones">
-                            <li><i class="fas fa-bed"></i><span class="espacioTexto">ADMINISTRACION DE HABITACIONES</span></li>
-                            <li><i class="far fa-user-circle"></i><span class="espacioTexto">LISTA DE EMPLEADOS</span></li>
-                            <li><i class="far fa-id-card"></i><span class="espacioTexto">LISTA DE HUESPEDES</span></li>
-                            <li><i class="fas fa-book"></i><span class="espacioTexto">LISTA DE RESERVAS POR EMPLEADO</span></li>
-                            <li><i class="far fa-calendar-alt"></i><span class="espacioTexto">LISTA DE HUESPED SEGUN RANGO DE FECHAS</span></li>
-                        </ul>
+                <div class="seccion-servicios">
+                    <h2 >GESTION DE SERVICIOS</h2>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <form action="SvListarReserva" method="GET">
+                                    <button class="btn btn-primary" id="listaReservas" type="submit">LISTA DE RESERVAS
+                                    <i class="fas fa-suitcase-rolling"></i></button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-2 imgRight"></div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row listas">
+                        <div class="col-2 imgLeft"></div>  
+                        <div class="col-8 panel">
+                            <h3 class="titulo">PANEL DE CONTROL PARA LA ADMINISTRACION DE:</h3>
+                            <br>
+                            <ul class="listaOpciones">
+                                <li><i class="fas fa-bed"></i><span class="espacioTexto">ADMINISTRACION DE HABITACIONES</span></li>
+                                <li><i class="far fa-user-circle"></i><span class="espacioTexto">LISTA DE EMPLEADOS</span></li>
+                                <li><i class="far fa-id-card"></i><span class="espacioTexto">LISTA DE HUESPEDES</span></li>
+                                <li><i class="fas fa-book"></i><span class="espacioTexto">LISTA DE RESERVAS POR EMPLEADO</span></li>
+                                <li><i class="far fa-calendar-alt"></i><span class="espacioTexto">LISTA DE HUESPED SEGUN RANGO DE FECHAS</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-2 imgRight"></div>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
     <hr>
     <!--Inicio de resolucion de puntos A B C D-->
@@ -420,21 +431,22 @@
                                 <div class="espacio"></div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <button id="boton" type="submit" class="submit-btn">REGISTRAR</button>
+                                        <button id="btn" type="submit" class="submit-btn">REGISTRAR</button>
                                     </div>
                                 </div>
+                                <div class="espacio"></div>
                             </form>
-                        </div> 
+                        </div>
                     </div>
                 </div>  
-            </div>
+            </div>   
             <!--Habitacion MULTIPLE-->
             <div class="col-md-3">
                 <div class="card" style="width: 18rem;height:38rem;">
                     <img class="card-img-top" src="Resourses/Images/habitacion-IV.jpeg" alt="Card image cap">
                     <div class="card-body">
                         <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">SINGLE</h4>
+                            <h4 class="my-0 font-weight-normal">MULTIPLE</h4>
                         </div>
                         <div class="form-group">
                             <form action="SvHabitacion" method="POST">

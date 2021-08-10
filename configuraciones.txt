@@ -1,0 +1,22 @@
+Di Ludovico Maximiliano
+
+Hotel Royal Hunt
+/*************************************************************************************/
+Unidad de persistencia:RoyalHuntPU
+Usuario:root
+contraseña:""
+/*************************************************************************************/
+Complementos y librerias:
+
+mysql-connector-java-5.1.23-bin.jar
+javax.persistence-2.0.0.jar
+
+netbeans-8.2-windows.exe
+jre-8u281-windows-x64.exe
+jdk-8u281-windows-x64.exe
+/**************************************************************************************/
+
+nombre de la BBDD:royalhunt
+
+conexion a la BBDD: jdbc:mysql://localhost:3306/royalhunt?serverTimezone=UTC
+

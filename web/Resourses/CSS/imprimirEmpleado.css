@@ -41,8 +41,9 @@ body{
     color:white;
     font-weight: bold;
     border-radius: 15px;
+     margin-top: 1rem;
     position: absolute;
-    bottom: 0px;
+    align-items: center;
     left:5px;
 }
 /*Efecto para boton reserva*/

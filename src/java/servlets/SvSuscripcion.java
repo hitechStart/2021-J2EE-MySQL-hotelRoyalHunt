@@ -45,9 +45,9 @@ public class SvSuscripcion extends HttpServlet {
         ControladoraSuscripcion ctrl_suscripcion = new ControladoraSuscripcion();
 
         try {
-            System.out.println("Ingreso a try");
+            
             ctrl_suscripcion.crearSuscripcion(idDni, email, mensaje);
-              System.out.println("Salio de crear suscrpcion");
+              
             response.sendRedirect("principal.jsp");
         } catch (Exception ex) {
               System.out.println("Ingreso a catch");

@@ -20,7 +20,7 @@
             <a href="./PanelControl.jsp">PANEL DE CONTROL</a>        
             <a>
                 <form action="SvCerrarSesion" method="POST" >
-                    <button type="submit" id="cerrarSesion" > 
+                    <button type="submit" id="cerrarSesion" style="color:#FFFFFF;" > 
                         <%=session.getAttribute("usuario")%><i class="fas fa-power-off"></i>
                     </button>
                 </form>
@@ -45,7 +45,7 @@
             <a href="./PanelControl.jsp">PANEL DE CONTROL</a>
             <a>
             <form action="SvCerrarSesion" method="POST" >
-                <button type="submit" id="cerrarSesion" style="color:black" > 
+                <button type="submit" id="cerrarSesion" style="color:white" > 
                     <%=session.getAttribute("usuario")%><i class="fas fa-power-off"></i>
                 </button>
             </form>

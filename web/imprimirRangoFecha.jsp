@@ -16,7 +16,7 @@
     <div class="container marco" >
         <div class="row">
             <div class="usuario">
-                <h3>Empleado:<%=session.getAttribute("usuario")%></h3>
+                <h3>Usuario:<%=session.getAttribute("usuario")%></h3>
             </div>
         </div>
         <p class="item">D-Listas de todas las reservas en un período</p>
